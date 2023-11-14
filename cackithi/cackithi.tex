@@ -2,589 +2,260 @@
 \pagestyle{cackithitoan}
 \everymath{\color{cackithi}}
 \graphicspath{{../cackithi/pic/}}
-\blfootnote{\color{cackithi}$^1$Khoa Toán Đại học Osnabrueck, CHLB Đức.}
+\blfootnote{\color{cackithi}$^*$Khoa Toán Đại học Osnabrueck, CHLB Đức.}
 \begingroup
 \AddToShipoutPicture*{\put(0,616){\includegraphics[width=19.3cm]{../bannercackithi}}}
-\AddToShipoutPicture*{\put(82,527){\includegraphics[scale=1]{../tieude2.pdf}}}
+\AddToShipoutPicture*{\put(76,555){\includegraphics[scale=1]{../tieude2.pdf}}}
 \centering
 \endgroup
-\vspace*{182pt}
+\vspace*{155pt}
 
 \begin{multicols}{2}
-	Trong chuyên mục này, chúng tôi sẽ trình bày Lời giải của các bài toán trong vòng hai kỳ thi toán học liên bang Đức năm $2023$, đăng trong số báo $9/2023$. 
-	\vskip 0.1cm
-	\textbf{\color{cackithi}Câu $\pmb{1}$:} Tìm ước chung lớn nhất của tất cả các số có dạng $p^6 - 7p^2 +6$ với $p$ chạy trên tập tất cả các số nguyên tố và $p \ge 11$.
-	\vskip 0.1cm
-	\textit{Lời giải.}
-	Đặt $f(p) \colon =p^6 - 7p^2 +6$. Gọi $a$ là ước chung lớn nhất (ƯCLN) của tất cả các $f(p)$ với $p$ nguyên tố và $p \ge 11$. Ta sẽ chứng minh rằng $a = 2^5\times 3 \times 7$.
-	\vskip 0.1cm	
-	Thật vậy, theo định lý Fermat nhỏ thì $7|p^6 - 1$ với mọi số nguyên $7 \not | p$. Do đó, $7 |p^6 - 1  - 7p^2 + 7 = f(p)$ với mọi $p$ như trên và ta có $7 | a$.
-	\vskip 0.1cm	
-	Mặt khác, 
-	$f(p) = (p^2-1)(p^2-2)(p^2+3) \equiv (p^2-1)(p^2-2)p^2 \mod 3 \equiv 0 \mod 3$ do $p^2, p^2-1, p^2-2$ là ba số nguyên liên tiếp. Như vậy, $3 | f(p)$ với mọi $p$ và ta thu được $3|a$.
-	\vskip 0.1cm	
-	Hơn nữa, do $p$ nguyên tố và $p \ge 11$ nên $p$ là số lẻ. Đặt $p= 2k+1$, ta có
-	\begin{align*}
-			f(p) = & (p^2-1)(p^2-2)(p^2+3) \\
-			= & (4k^2 \!+\! 4k) \!(4k^2 \!+\! 4k\!-\!1)(4k^2\!+\!4k\!+\!4) \\
-			= & 16k(k\!+\!1)(4k^2 \!+\! 4k\!-\!1)(k^2 \!+\! k \!+\! 1).
-	\end{align*}
-	Vì $2 |k(k+1)$ với mọi $k \in \mathbb{Z}$ nên $2\times 16 = 32 = 2^5 |f(p)$. Bởi vậy $2^5 |a$.
-	\vskip 0.1cm
-	Do $2^5, 3$ và $7$ đôi một nguyên tố cùng nhau nên
-	\begin{align*}
-		2^5 \times 3 \times 7 |a. \tag{$1$}
-	\end{align*}
-		Mặt khác, vì
-		$
-		f(11) = 1770720 = 2^5 \times 3 \times 5 \times 7 \times 17 \times 31
-		$
-		và
-		$
-		f(13) = 4825632 = 2^5 \times 3 \times 7 \times 43 \times 167
-		$
-		nên 
-		\begin{align*}
-			a |\text{ƯCLN}(f(11), f(13)) \!=\! 2^5\!\times\! 3 \!\times\! 7. \tag{$2$}
-		\end{align*}
-		Từ ($1$) và ($2$) ta thu được $a = 2^5\times 3 \times 7$.
-	\vskip 0.1cm
-	\textbf{\color{cackithi}Câu $\pmb{2}$:} Trên một hòn đảo địa hình đồi núi có $2023$ điểm quan sát. Từ mỗi điểm quan sát có thể nhìn thấy ít nhất $42$ điểm quan sát khác. Với hai điểm quan sát bất kỳ $X$ và $Y$, luôn tồn tại một số nguyên dương $n$ và các điểm quan sát $A_1,  A_2, \ldots, A_{n+1}$ sao cho $A_1 = X$, $A_{n+1} = Y$ và mỗi cặp điểm liền kề $A_i$ với $A_{i+1}$ có thể quan sát được lẫn nhau với $i = 1, 2, \ldots, n$. Số $n$ nhỏ nhất như vậy được gọi là khoảng cách quan sát (Sichtabstand). 
-	\vskip 0.1cm
-	Xác định khoảng cách quan sát lớn nhất có thể có giữa hai cặp điểm quan sát thỏa mãn những điều kiện ở trên.
-	\vskip 0.1cm
-	\textit{Lời giải.}
-	Ta sẽ chứng minh rằng khoảng cách quan sát lớn nhất có thể là $140$.
-	\vskip 0.1cm	
-	Với hai điểm quan sát $X,Y$ trong bài, ta nói $A_1, \ldots, A_{n+1}$ là các điểm thuộc \textit{chuỗi quan sát} độ dài $n$ nối $X$ và $Y$. Để tìm một chuỗi quan sát có độ dài nhỏ nhất, ta chỉ cần xét trường hợp mỗi điểm quan sát trong chuỗi xuất hiện đúng một lần. Vì chỉ có hữu hạn điểm quan sát nên độ dài các chuỗi quan sát là hữu hạn (bị chặn trên bởi $2022$). Như vậy giữa tất cả các chuỗi quan sát nối $X$ và $Y$ luôn tồn tại chuỗi quan sát có độ dài ngắn nhất, và độ dài này chính là khoảng cách quan sát được định nghĩa ở trên. Do chỉ có hữu hạn các cặp điểm quan sát, tồn tại một cặp điểm có khoảng cách quan sát lớn nhất.
-	\vskip 0.1cm	
-	Cho trước một hệ thống tùy ý $M$ gồm $2023$ điểm quan sát thỏa mãn yêu cầu của bài toán. Chọn $X \in M$ bất kỳ và gọi $M_i$ tập các điểm quan sát có khoảng cách quan sát $i$ tới $X$. Ta cũng sẽ đặt $M_0 = \{X\}$. Do với bất kỳ $Y \in M$ luôn tồn tại một chuỗi quan sát nối $X$ và $Y$ nên các tập $M_i$ lập nên một phân hoạch của $M$. Nói cách khác, $M = \cup_{i}M_i$ và $M_i \cap M_j = \emptyset$ nếu $i\neq j$.
-	\vskip 0.1cm
-	Gọi $n(X)$ là chỉ số sao cho $M_{n(X)} \neq \emptyset$ và $M_i = \emptyset$ với mọi $i \ge n(X)$. Bằng định nghĩa, với mỗi $Y \in M_{n(X)}$ luôn tồn tại chuỗi quan sát ngắn nhất $A_1, \ldots A_{n(X) + 1}$ với $A_1 = X$ và $A_{n(X)+1} = Y$. Rõ ràng $A_i, A_{i+1}, \ldots, A_{j}$ cũng là chuỗi quan sát ngắn nhất giữa $A_i$ và $A_j$ với mọi $1 \le i <j \le n(X) + 1$. Nói riêng, $A_i \in M_{i-1}$ và ta có $M_i \neq \emptyset$ với mọi $i \le n(X)$.
-	\vskip 0.1cm	
-	Hơn nữa, từ mỗi điểm trong $M_i$ chỉ có thể quan sát được các điểm trong $M_{i-1}, M_i$ và $M_{i+1}$. Thật vậy, nếu từ $V \in M_i$ quan sát được $W \in M_j$ với $j \le i-2$ thì $V \in M_{j+1}$. Do đó, $V \in M_i \cap M_{j+1}$. Điều này vô lý vì $M_i \cap M_{j+1} = \emptyset$ do $j+1 \neq i$. Tương tự, từ $V \in M_i$ quan sát được $W \in M_j$ với $j \ge i+2$ cũng dẫn đến mâu thuẫn. Vì từ mỗi $V \in M_i$ có thể quan sát được ít nhất $42$ điểm khác và các điểm này nằm trong $M_{i-1}, M_i, M_{i+1}$ nên
-	\begin{align*}
-		|M_{i-1} \cup M_i \cup M_{i+1}| \ge 43.
-	\end{align*}
-	Từ $X \in M_0$ chỉ quan sát được các điểm trong $M_1$ và từ $Y \in M_{n(X)}$ chỉ quan sát được các điểm từ $M_{n(X)}$ và $M_{n(X)-1}$ nên
-	\begin{align*}
-		|M_0 \cup M_1| \ge 43 \text{ và } |M_{n(X)-1} \cup M_{n(X)}| \ge 43.
-	\end{align*}
-	\textbf{\color{cackithi}Khẳng định $\pmb{1}$:} \textit{Khoảng cách quan sát lớn nhất không thể lớn hơn $140$.} 
-	\vskip 0.1cm
-	Thật vậy, nếu $M_{141} \neq \emptyset$ thì 
-	\begin{align*}
-		& |M_0 \cup M_1| + |M_2 \cup M_3 \cup M_4| \\
-		&+ |M_5 \cup M_6 \cup M7| + \ldots \\
-		&+ |M_{137} \cup M_{138} \cup M_{139}| + |M_{140} \cup M_{141}| \\
-		\ge \,&43 + 46.43 + 43 = 2064 > 2023
-	\end{align*}
-	dẫn đến mâu thuẫn.
-	\vskip 0.1cm
-		\textbf{\color{cackithi}Khẳng định $\pmb{2}$:} \textit{Tồn tại một hệ thống điểm quan sát sao cho khoảng cách quan sát lớn nhất là $140$.} 
-		\vskip 0.1cm
-		Thật vậy, xây dựng $141$ tập không rỗng $M_i$ với $i = 0, \ldots, 140$ như trong Hình $1$, trong đó:
-		\vskip 0.1cm
-		\begin{figure}[H]
-				\vspace*{-5pt}
-				\centering
-				\captionsetup{labelformat= empty, justification=centering}
-			\resizebox{\columnwidth}{!}{\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}, cackithi] 
-				\node[main, fill={rgb:orange,1;yellow,2;pink,5}] (1) {$A_0$}; 
-				\node[main, fill= teal!50] (2) [above right of=1] {$A_1^1$}; 
-				\node (3) [right = 5mm of 1] {$\vdots$};
-				
-				\node[main, fill= teal!50] (4) [below right of=1] {$A_1^{42}$}; 
-				\node[main, fill={rgb:orange,1;yellow,2;pink,5}] (5) [below right of=2] {$A_2$}; 
-				\node[main,fill=gray!50] (6) [above right of=5] {$A_3^1$}; 
-				\node (7) [right = 5mm of 5] {$\vdots$};
-				\node[main, fill=gray!50] (8) [below right of=5] {$A_3^{41}$}; 
-				\draw (1) -- (2); 
-				\draw (1) -- (3); 
-				\draw (1) -- (4); 
-				\draw (2) -- (3);
-				\draw (3) -- (4);
-				\draw (2) -- (5); 
-				\draw (3) -- (5); 
-				\draw (4) -- (5); 
-				\draw (5) -- (6);
-				\draw (5) -- (7);
-				\draw (5) -- (8);   
-				\draw (6) -- (7);
-				\draw (7) -- (8);
-				\node[main, fill={rgb:orange,1;yellow,2;pink,5}] (9) [below right of=6] {$A_4$};
-				\draw (6) -- (9);
-				\draw (7) -- (9); 
-				\draw (8) -- (9);  
-				\node[main, fill={rgb:orange,1;yellow,2;pink,5}] (10) [right = 5mm of 9] {$A_{138}$};
-				\draw[dashed] (9) -- (10);  
-				\node[main, fill= teal!50] (11) [above right of=10] {$A_{139}^1$}; 
-				\node (12) [right = 4mm of 10] {$\vdots$}; 
-				\node[main, fill= teal!50] (13) [below right of=10] {$A_{139}^{42}$}; 
-				\draw (10) -- (11);
-				\draw (10) -- (12);
-				\draw (10) -- (13);
-				\draw (11) -- (12);
-				\draw (12) -- (13);
-				\node[main, fill={rgb:orange,1;yellow,2;pink,5}] (14) [below right of=11] {$A_{140}$};
-				\draw (11) -- (14);
-				\draw (12) -- (14);
-				\draw (13) -- (14);
-			\end{tikzpicture}}
-			\caption{\small\textit{\color{cackithi}Hình $1$. Hệ thống điểm quan sát với khoảng cách quan sát lớn nhất $140$. Mỗi điểm $A_i^{\bullet}$ thuộc tập $M_i$ có thể quan sát được tất cả điểm trong $M_{i-1}, M_{i+1}$ cũng như các điểm còn lại trong $M_i$.}}
-			\vspace*{-10pt}
-		\end{figure}
-		\vskip 0.1cm		
-		$\bullet$ Mỗi tập $M_{3k}$ và $M_{3k+2}$ với $k = 0, \ldots, 46$ chỉ chứa một điểm quan sát.
-		\vskip 0.1cm
-		$\bullet$ Mỗi tập $M_{1}$ và $M_{139}$ có $42$ điểm quan sát.
-		\vskip 0.1cm
-		$\bullet$ Mỗi tập $M_{3k+1}$ với $k = 1, \ldots, 45$ có $41$ điểm quan sát.
-		\vskip 0.1cm
-		Độc giả có thể kiểm tra rằng hệ thống này có $2023$ điểm quan sát và thỏa mãn điều kiện của bài toán. Ở đó, điểm quan sát duy nhất trong $M_{140}$ có khoảng cách quan sát $140$ tới điểm quan sát duy nhất trong $M_0$.
-		\vskip 0.1cm
-	\textbf{\color{cackithi}Câu $\pmb{3}$:} Cho tam giác $ABC$ với tâm đường tròn nội tiếp $I$. Gọi trung điểm của các cạnh $AC$ và $BC$ lần lượt là $M_b$ và $M_a$. Gọi giao điểm của đường thẳng $M_bI$ với đường thẳng $BC$ là $B'$ và giao điểm của đường thẳng $M_aI$ với đường thẳng $AC$ là $A'$. Biết rằng hai tam giác $ABC$ và $A'B'C$ có cùng diện tích. 
-	\vskip 0.1cm
-	Tìm giá trị có thể của góc $ACB$.\footnote{\color{cackithi}Trong số $09/2023$ chúng tôi đã sai sót khi yêu cầu tìm giá trị \textbf{\color{cackithi}lớn nhất} có thể của góc $ACB$. Thành thật xin lỗi các độc giả của Pi.}	
-		\begin{figure}[H]
-			\vspace*{-10pt}
-			\centering
-			\captionsetup{labelformat= empty, justification=centering}
-			\resizebox{\columnwidth}{!}{\begin{tikzpicture}
-				\tkzSetUpPoint[size=4,circle, fill= teal!50]
-				\tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
-				
-				\tkzDefTriangleCenter[centroid](A,B,C)
-				\tkzGetPoint{G}
-				\tkzDefSpcTriangle[medial](A,B,C){Ma,Mb,Mc}
-				%\tkzLabelPoints(A,B,C)
-				\tkzDefTriangleCenter[in](A,B,C)
-				\tkzGetPoint{I}
-				
-				\tkzDefCircle[in](A,B,C) 
-				\tkzGetPoints{I}{i}
-				
-				\tkzInterLL(Mb,I)(B,C)
-				\tkzGetPoint{B1}
-				\tkzInterLL(Ma,I)(A,C)
-				\tkzGetPoint{A1}
-				\tkzDrawSegments(A,B B,C C,A)
-				\tkzDrawPoints(A1,B1)
-				\tkzLabelPoint[above left](A1){$A'$}
-				\tkzLabelPoint(B1){$B'$}
-				\tkzDrawLines[dashed](B1,Mb A1,Ma)
-				\tkzDrawSegments(B1,B A1,B1)
-				\tkzDrawCircle(I,i)
-				\tkzDrawPoints(I, Mb, Ma)
-				
-				\tkzDrawPoints(A,B,C)
-				
-				\tkzLabelPoint(I){$I$}
-				
-				\tkzLabelPoints[below left](A,Mb)
-				\tkzLabelPoints[above right](B,Ma)
-				\tkzLabelPoint[above](C){$C$}
-			\end{tikzpicture}}
-		\vspace*{-10pt}
-		\end{figure}
-		\textit{Lời giải.} Gọi độ dài các cạnh $AB$, $BC$ và $CA$ lần lượt là $c$, $a$, $b$. Đặt $\gamma \colon = \angle ACB$. Ta sẽ chứng minh rằng $\gamma = 60^{\circ}$.
-		\vskip 0.1cm
-		Thật vậy, từ $M_a$ vẽ đường thẳng song song với $AC$ và cắt $CI$ tại $P$. Vì $\angle CPM_a = \angle A'CI = \gamma/2$ nên tam giác $CM_aP$ cân tại $M_a$ và ta có $M_aP = M_aC = a/2 = M_aB$. Như vậy $P$ nằm trên đường tròn tâm $M_a$ bán kính $a/2$. Từ đó suy ra tam giác $BPC$ vuông tại $P$ và ta thu được 
-		\begin{align*}
-			CP = CB \cos (\gamma /2) = a \cos(\gamma/2).
-		\end{align*}
-		\begin{figure}[H]
-			\vspace*{-5pt}
-			\centering
-			\resizebox{\columnwidth}{!}{\begin{tikzpicture}[color= cackithi]
-				\tkzSetUpPoint[size=4, fill= teal!50]
-				
-				\tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
-				
-				\tkzDefTriangleCenter[centroid](A,B,C)
-				\tkzGetPoint{G}
-				\tkzDefSpcTriangle[medial](A,B,C){Ma,Mb,Mc}
-				%\tkzLabelPoints(A,B,C)
-				\tkzDefTriangleCenter[in](A,B,C)
-				\tkzGetPoint{I}
-				
-				\tkzDefCircle[in](A,B,C) 
-				\tkzGetPoints{I}{i}
-				
-				\tkzInterLL(Mb,I)(B,C)
-				\tkzGetPoint{B1}
-				\tkzInterLL(Ma,I)(A,C)
-				\tkzGetPoint{A1}
-				\tkzDrawSegments(A,B B,C C,A)
-				\tkzDrawPoint(A1)
-				\tkzLabelPoint[above left](A1){$A'$}
-				\tkzDrawLine[dashed](A1,Ma)
-				\tkzDrawCircle(I,i)
-				\tkzDrawPoints(I, Mb, Ma)
-				
-				\tkzDrawPoints(A,B,C)
-				
-				\tkzLabelPoint(I){$I$}
-				
-				\tkzAutoLabelPoints[center = G](A,B,C)
-				\tkzLabelPoint[below left](Mb){$M_b$}
-				\tkzLabelPoint[above right](Ma){$M_a$}
-				\tkzLabelPoint[below right](Mc){$M_c$}
-				\tkzInterLL(C,I)(Ma,Mc)
-				\tkzGetPoint{P}
-				\tkzDrawSegments(C,P P,B Ma,P)
-				\tkzDrawPoint(P)
-				\tkzLabelPoint(P){$P$}
-				\tkzDefPointBy[projection = onto C--B](I)
-				\tkzGetPoint{Ta}
-				\tkzDrawPoint(Ta)
-				\tkzLabelPoint[above](Ta){$T_a$}
-				\tkzDrawSegment(Ta,I)
-				\tkzMarkRightAngles(C,Ta,I C,P,B)
-				\tkzMarkAngle[size = 0.6, arc=l](P,C,B)
-				\tkzLabelAngle[pos=0.95](P,C,B){$\gamma/2$}
-				\tkzMarkAngle[size = 0.6, arc=l](Ma,P,C)
-				\tkzLabelAngle[pos=0.95](Ma,P,C){$\gamma/2$}
-			\end{tikzpicture}}
-			\vspace*{-10pt}
-		\end{figure}
-		Gọi $T_a$ là điểm tiếp xúc của đường tròn nội tiếp tam giác $ABC$ với cạnh $BC$ thì $CT_a = (a+b-c)/2$. Do đó 
-		\begin{align*}
-			CI = \frac{CT_a}{\cos(\gamma/2)} = \frac{a+b-c}{2 \cos(\gamma/2)}
-		\end{align*}
-		và ta có
-		\begin{align*}
-		IP = CP - CI & =  a \cos(\gamma/2) - \frac{a+b-c}{2 \cos(\gamma/2)} \\
-		& = \frac{2a \cos^2(\gamma/2) -a-b+c}{2 \cos(\gamma/2)} \\
-		& = \frac{a[2\cos^2(\gamma /2)-1] - b +c}{2 \cos(\gamma/2)} \\
-		& = \frac{a \cos (\gamma)-b+c}{2 \cos(\gamma/2)}.
-		\end{align*}
-		Vì $A'C \parallel M_aP$ nên theo định lý Thales 
-		\begin{align*}
-			\frac{CA'}{M_aP} = \frac{CI}{IP} & =  \frac{a+b-c}{a \cos(\gamma) - b +c} \\
-			& = \frac{a+b-c}{a\frac{a^2 + b^2 -c^2}{2ab} -b +c} \\
-			& = \frac{2b(a+b-c)}{a^2 + b^2 - c^2 - 2b^2 + 2bc} \\
-			& = \frac{2b(a+b-c)}{a^2 - b^2 -c^2 + 2bc} \\
-			& = \frac{2b(a+b-c)}{(a+c-b)(a+b-c)} \\
-			& = \frac{2b}{a+c-b}
-		\end{align*}
-		và do đó
-		\begin{align*} 
-			\frac{CA'}{CB} = \frac{CA'}{2M_aP} = \frac{b}{a+c-b}. \tag{$3$}
-		\end{align*}
-		Hoán đổi vai trò của $A$ với $B$ (do đó $M_a$ với $M_b$, $a$ với $b$, $A'$ với $B'$) ta thu được
-		\begin{align*} 
-			\frac{CB'}{CA} = \frac{a}{b+c-a}. \tag{$4$}
-		\end{align*}
-		Từ giả thiết hai tam giác $ABC$ và $A'B'C$ có cùng diện tích ta có
-		\begin{align*}
-			\frac{CA'}{CB} = \frac{CA}{CB'}.
-		\end{align*}
-		Kết hợp với ($3$) và ($4$) ta nhận được
-		\begin{align*}
-			&\frac{b}{a+c-b}  = \frac{b+c-a}{a} \\
-			\Leftrightarrow \,&ab  = (a+c-b)(b+c-a) \\
-			\Leftrightarrow \,&ab  = c^2 - (a-b)^2 \\
-			\Leftrightarrow \,&c^2 = a^2 + b^2 - ab.
-		\end{align*}
-		Từ hệ thức $c^2 = a^2 + b^2 - 2 ab \cos(\gamma)$ suy ra $\cos(\gamma) = \frac{1}{2}$. Do đó $\gamma = 60^{\circ}$.
-	\vskip 0.1cm
-	\textbf{\color{cackithi}Câu $\pmb{4}$}: Cho một đa giác đều $2n$ cạnh. Trong các đoạn thẳng nối các đỉnh của đa giác (cạnh biên hoặc đường chéo) ta tô $n$ đoạn màu đỏ sao cho:
-	\vskip 0.1cm
-	$1.$ Các điểm cuối của các đoạn màu đỏ chính là $2n$ đỉnh của đa giác.
-	\vskip 0.1cm
-	$2.$ Không có $2$ đoạn màu đỏ nào có độ dài bằng nhau.
-	\vskip 0.1cm
-	Tìm tất cả các số tự nhiên $n \ge 2$ sao cho tồn tại một phép tô màu thỏa mãn yêu cầu bên trên.
-	\vskip 0.1cm	
-	\textit{Lời giải.}
-	Ta sẽ chứng minh rằng một cách tô màu như vậy tồn tại khi và chỉ khi $n \equiv 0 \mod 4$ hoặc $n \equiv 1 \mod 4$.
-	\vskip 0.1cm
-	$``\Rightarrow":$ Giả sử tồn tại cách tô màu như vậy. Gọi $2n$ đỉnh của đa giác là $A_1, A_2, \ldots, A_{2n}$, được sắp xếp theo chiều kim đồng hồ. Ta định nghĩa \textit{khoảng cách $d(i,j)$ giữa hai đỉnh $A_i, A_j$} là số cạnh nằm trên đường đi ngắn nhất dọc theo các cạnh biên của đa giác nối hai đỉnh này. Khoảng cách này sẽ lấy một trong các giá trị trong tập $\{1,2\ldots,n\}$. Chẳng hạn, với $n=4$ như trong Hình $2$ thì $d(1,4) = 3$ và $d(1,7) = 2$. 
-	\vskip 0.1cm
-	Dễ thấy
-	\begin{align*}
-		A_iA_j = 2r \sin\frac{d(i,j)\pi}{2n}
-	\end{align*}
-	với $r$ là khoảng cách từ đỉnh đến tâm của đa giác. Do đó, $A_iA_j > A_rA_s \iff d(i,j) > d(r,s)$. Bởi vậy ta có thể thay yêu cầu rằng không có hai đoạn màu đỏ nào có cùng độ dài bằng yêu cầu không có hai cặp đỉnh nào có cùng khoảng cách.
-	\vskip 0.1cm	
-	Biểu diễn mỗi cặp đỉnh $(A_i, A_j)$ bởi cặp chỉ số $(i,j)$. Ta có thể giả sử $i <j$. Bài toán đã cho tương đương với việc phân hoạch tập $2n$ số tự nhiên $\{1,2,\ldots, 2n\}$ thành $n$ cặp $\{(i_k,j_k)\}_{k = 1}^n$ với $i_k<j_k$ sao cho tập các khoảng cách $\{d(i_k,j_k)\}_{k=1}^n$ là $\{1, \ldots, n\}$. Ta có
-	\begin{align*}
-		\hspace*{-10pt}d(i_k,j_k) \!\!=\!\! 
-		\begin{cases}
-			\!\!j_k\!-\!i_k, \text{ nếu } j_k\!-\!i_k \!\le\! n \\
-			\!\!2n\!-\! j_k \!+\! i_k, \text{ nếu } j_k\!-\!i_k \!>\! n.
-		\end{cases}\hspace*{-10pt} \tag{$5$}
-	\end{align*}
-	Bằng cách hoán đổi $i_k$ với $j_k$ trong trường hợp $j_k-i_k > n$ ta có 
-	\begin{align*} 
-			\sum_{k=1}^{n}j_k - \sum_{k=1}^n i_k = &\sum_{k=1}^nd(i_k,j_k) + 2ns\\
-			 = &\sum_{k=1}^ni + 2ns \\
-			 = &n(n+1)/2 + 2ns.\tag{$6$}
-		\end{align*}
-		với $s$ là số trường hợp $j_k-i_k > n$. Mặt khác,
-		\begin{align*}
-			\sum_{k=1}^nj_k + \sum_{k=1}^ni_k &= \sum_{k=1}^{2n}i \\
-			&= 2n(2n+1)/2. \tag{$7$}
-		\end{align*}
-		Từ các phương trình ($6$) và ($7$) ta thu được 
-		\begin{align*}
-			\sum_{k=1}^{n}j_k = \frac{n(5n+3)}{4} + ns.
-		\end{align*}
-		Vì $\sum_{k=1}^{n}j_k \in \mathbb{N}$ nên $\frac{n(5n+3)}{4} \in \mathbb{Z}$. Từ đó suy ra $n \equiv 0 \mod 4$ hoặc $n \equiv 1 \mod 4$.
-		\vskip 0.1cm
-		$``\Leftarrow":$
-		\vskip 0.1cm
-		\underline{\textit{Trường hợp $n \equiv 0 \mod 4$.}} Đặt $n = 4k$.
-		\vskip 0.1cm
-		$\bullet$ Với $k=1$ ta có thể tô màu như Hình $2$.
-			\begin{figure}[H]
-%				\vspace*{-10pt}
-				\centering
-				\captionsetup{labelformat= empty, justification=centering}
-				\begin{tikzpicture}[cackithi,scale = 0.75]
-					\tkzSetUpPoint[size=4, fill= teal!50]
-					\def\laenge{1.7}
-					\def\n{8}
-					\pgfmathtruncatemacro\w{360/\n}
-					\draw
-					(0:0) coordinate (A1)
-					foreach \i in {2,...,\n}
-					{--++(360+\w/2-\i*\w +\w:\laenge) coordinate (A\i)}
-					--cycle;
-					\tkzDrawPoints(A1,A...,A8)
-					\foreach \i in {1,...,\n}\node[anchor={270-\i*\w +\w}, circle] at (A\i){$A_{\i}$};
-					\tkzDrawSegment[red](A1,A8)
-					\tkzDrawSegment[red](A2,A6)
-					\tkzDrawSegment[red](A3,A5)
-					\tkzDrawSegment[red](A4,A7)
-				\end{tikzpicture}
-				\caption{\small\textit{\color{cackithi}Hình $2$. Đa giác đều $8$ cạnh.}}
-				\vspace*{-10pt}
-			\end{figure}
-			$\bullet$ Với $k \ge 2$ thì danh sách các đoạn màu đỏ cùng với khoảng cách giữa các đỉnh (phương trình ($5$) với $2n = 8k$) được cho trong bảng dưới đây:
-		\begin{center}
-			\resizebox{\linewidth}{!}{%
-				\begin{tabular}{ |c|c|c| } 
-					\hline
-					Chỉ số & Cạnh & Khoảng cách \\ 
-					\hline
-					$1 \le i \le k$ & $(i, 8k+1-i)$ & $1,3, \ldots, 2k-1$ \\ 
-					\hline
-					$i = k+1$ & $(k+1, 5k+1)$ & $4k$ \\
-					\hline
-					$k+2 \le i \le 2k$ & $(i, 8k+2-i)$ & $2k+2, 2k+4, \ldots, 4k-2$ \\ 
-					\hline
-					$i = 2k+1$ & $(2k+1,4k+1)$ & $2k$ \\
-					\hline
-					$2k+2 \le i \le 3k+1$ & $(i, 8k+3-i)$ & $4k-1, 4k-3,\ldots, 2k+1$ \\
-					\hline
-					$3k+2 \le i \le 4k$ & $(i, 8k+2-i)$ & $2k-2, \ldots, 2$ \\
-					\hline
-			\end{tabular}}
-		\end{center}
-		\begin{figure}[H]
-%			\vspace*{-5pt}
-			\centering
-			\captionsetup{labelformat= empty, justification=centering}
-			\begin{tikzpicture}[cackithi,scale = 0.95]
-				\tkzSetUpPoint[size=4, fill= teal!50]
-				\def\laenge{1}
-				\def\n{16}
-				\pgfmathtruncatemacro\w{360/\n}
-				\draw
-				(0:0) coordinate (A1)
-				foreach \i in {2,...,\n}
-				{--++(360+\w/2-\i*\w +\w:\laenge) coordinate (A\i)}
-				--cycle;
-				\tkzDrawPoints(A1,A...,A16)
-				\foreach \i in {1,...,\n}\node[anchor={270-\i*\w +\w}, circle] at (A\i){$A_{\i}$};
-				\tkzDrawPoints(A1,A...,A16)
-				\tkzDrawSegment[red](A1,A16)
-				\tkzDrawSegment[red](A2,A15)
-				\tkzDrawSegment[red](A3,A11)
-				\tkzDrawSegment[red](A4,A14)
-				\tkzDrawSegment[red](A5,A9)
-				\tkzDrawSegment[red](A6,A13)
-				\tkzDrawSegment[red](A7,A12)
-				\tkzDrawSegment[red](A8,A10)
-			\end{tikzpicture}
-			\caption{\small\textit{\color{cackithi}Hình $3$. Đa giác đều $16$ cạnh.}}
-			\vspace*{-15pt}
-		\end{figure}
-		\underline{\textit{Trường hợp $n \equiv 1 \mod 4$.}} Đặt $n = 4k+1$. 
-		\vskip 0.1cm
-		$\bullet$ Với $k=1$ ta có thể tô màu như Hình $4$.
-		\begin{figure}[H]
-			\vspace*{-10pt}
-			\centering
-			\captionsetup{labelformat= empty, justification=centering}
-			\begin{tikzpicture}[cackithi,scale = 0.95]
-				\tkzSetUpPoint[size=4, fill= teal!50]
-				\def\laenge{1.5}
-				\def\n{10}
-				\pgfmathtruncatemacro\w{360/\n}
-				\draw
-				(0:0) coordinate (A1)
-				foreach \i in {2,...,\n}
-				{--++(360+\w/2-\i*\w +\w:\laenge) coordinate (A\i)}
-				--cycle;
-				\tkzDrawPoints(A1,A...,A10)
-				\foreach \i in {1,...,\n}\node[anchor={270-\i*\w +\w}, circle] at (A\i){$A_{\i}$};
-				\tkzDrawPoints(A1,A...,A10)
-				\tkzDrawSegment[red](A1,A10)
-				\tkzDrawSegment[red](A2,A8)
-				\tkzDrawSegment[red](A3,A6)
-				\tkzDrawSegment[red](A4,A9)
-				\tkzDrawSegment[red](A5,A7)
-			\end{tikzpicture}
-			\caption{\small\textit{\color{cackithi}Hình $4$. Đa giác đều $10$ cạnh.}}
-			\vspace*{-15pt}
-		\end{figure}
-		$\bullet$  Với $k \ge 2$ thì danh sách các đoạn màu đỏ cùng với khoảng cách giữa các đỉnh (phương trình ($5$) với $2n = 8k+2$) được cho trong bảng dưới đây:
-		\begin{center}
-			\resizebox{\linewidth}{!}{%
-				\begin{tabular}{ |c|c|c| } 
-					\hline
-					Chỉ số & Cạnh & Khoảng cách \\ 
-					\hline
-					$1 \le i \le k$ & $(i, 8k+3-i)$ & $1,3, \ldots, 2k-1$ \\ 
-					\hline
-					$i = k+1$ & $(k+1, 5k+3)$ & $4k$ \\
-					\hline
-					$k+2 \le i \le 2k$ & $(i, 8k+4-i)$ & $2k+2, 2k+4, \ldots, 4k-2$ \\ 
-					\hline
-					$i = 2k+1$ & $(2k+1, 4k+2)$ & $2k+1$ \\
-					\hline
-					$2k+2 \le i \le 3k+1$ & $(i, 8k+5-i)$ & $4k+1, 4k-1,\ldots, 2k+3$ \\
-					\hline
-					$3k+2 \le i \le 4k+1$ & $(i,8k+4-i)$ & $2k, \ldots, 2$ \\
-					\hline
-			\end{tabular}}
-		\end{center}
-\end{multicols}
-\newpage
-\begingroup
-\AddToShipoutPicture*{\put(150,700){\includegraphics[scale=1]{../tieude1.pdf}}}
-\centering
-\endgroup
-\vspace*{3pt}
-
-\begin{multicols}{2}
-	Trong phần đầu chuyên mục, chúng tôi sẽ trình bày với các bạn lời giải các bài toán trong kỳ thi Olympic toán Tuymaada năm $2022$ của nước cộng hòa Sakha (Yakutia), thuộc Liên bang Nga đăng trong số tháng $5/2023$. 
+	Bất chấp lịch sử ngắn ngủi của mình, máy tính và trí tuệ nhân tạo (AI) đã thay đổi một cách cơ bản những gì chúng ta thấy, những gì chúng ta biết và những gì chúng ta làm. Chỉ trong một thời gian ngắn, các hệ thống AI đã xâm nhập vào mọi lĩnh vực của cuộc sống, từ khái quát như học tập, lý luận, nhận thức, v.v., cho đến cụ thể như chơi cờ, chứng minh các định lý toán học, vẽ tranh, sáng tác nhạc, viết tiểu luận, làm thơ, lái xe ô tô hay chẩn đoán bệnh. Thế giới thay đổi nhanh chóng đến nỗi ngay cả những công nghệ khá gần đây cũng khiến chúng ta cảm thấy lạc hậu như thế nào. Điện thoại di động vào những năm 90 là những viên gạch lớn với màn hình nhỏ màu xanh lá cây. Hai thập kỷ trước đó, bộ lưu trữ chính của máy tính là thẻ đục lỗ.
 	\begin{figure}[H]
 		\vspace*{-5pt}
 		\centering
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{gocolympic}
-%		\caption{\small\textit{\color{}.}}
+		\includegraphics[width= 1\linewidth]{AI1.jpg}
+%		\caption{\small\textit{\color{}}}
 		\vspace*{-15pt}
 	\end{figure}
-	{\bf\color{cackithi} OC$\pmb{46.}$} Arnim và Brentano có một chiếc bình nhỏ đựng $1500$ viên kẹo trên bàn và một túi lớn đựng kẹo dự phòng dưới gầm bàn. Họ thay phiên nhau chơi một trò chơi với Arnim bắt đầu trước. Ở mỗi lượt đi, người chơi có thể ăn $7$ viên kẹo trong bình hoặc lấy 6 viên kẹo từ túi bên dưới và thêm chúng vào bình. Người chơi không được lấy kẹo trong túi dưới gầm bàn hai lần liên tiếp. Người chơi được tuyên bố là người chiến thắng nếu làm cho chiếc bình rỗng sau lượt chơi của mình. Trong mọi trường hợp khác, nếu
-	một người chơi không thể thực hiện được nước đi trong lượt của mình, trò chơi được tuyên bố là hòa. Liệu người nào có chiến lược để luôn chiến thắng?
+	Máy tính cùng các ứng dụng thông minh phát triển một cách nhanh chóng và trở thành một phần không thể thiếu trong cuộc sống hàng ngày của chúng ta khiến con người dễ dàng quên mất các công nghệ này mới ra đời như thế nào. Để biết tương lai sẽ ra sao, việc nghiên cứu lịch sử thường rất hữu ích. Trong bài viết này, chúng ta hãy cùng nhìn lại một số cột mốc quan trọng trong lịch sử phát triển của máy tính và lĩnh vực AI, để xem chúng ta có thể mong đợi điều gì từ chúng trong tương lai, để xem liệu AI sẽ đi đến đâu, và quan trọng hơn, nó sẽ dẫn chúng ta đến đâu.
 	\vskip 0.1cm
-	\textit{Lời giải.} Ban đầu trong bình có $1500$ viên kẹo. Brentano có chiến lược để luôn thắng bằng cánh đảm bảo rằng nếu trước lượt đi của Arnim trong bình có $15k$ viên kẹo, thì sau khi mỗi người đi $2$ lượt, trong bình sẽ còn lại $15(k-1)$ viên kẹo. 
+	\textbf{\color{cackithi}Những hạt giống đầu tiên}
 	\vskip 0.1cm
-	Cụ thể là nếu trong lượt đi thứ nhất của mình Arnim thêm $6$ viên kẹo vào bình thì ở lượt đi sau anh ta phải ăn $7$ viên. Do đó Brentano sẽ ăn $7$ viên kẹo trong cả $2$ lượt đi của mình và số kẹo trong bình sau đó là $15k+6-7-7-7=15(k-1).$ Nếu trong lượt đi thứ nhất của mình Arnim  ăn $7$ viên thì Brentano cũng ăn $7$ viên trong lượt thứ nhất. 
-	Đến lượt đi thứ $2$ nếu Arnim ăn $7$ viên thì sau đó Brentano thêm vào $6$ viên và số kẹo trong bình còn lại là $15k-7-7-7+6=15(k-1).$    Còn nếu đến lượt thứ $2$ Arnim thêm vào 6 viên thì sau đó Brentano sẽ ăn $7$ viên và số kẹo trong bình còn lại là $15k-7-7+6-7=15(k-1).$ Như vậy sau khi mỗi người đi $200$ lượt thì Brentano là người chiến thắng.
-	\vskip 0.1cm
-	{\bf\color{cackithi}OC$\pmb{47.}$}  Cho $M$ là trung điểm của cạnh $A$B trong tam giác đều $ABC.$ Điểm $D$ thuộc cạnh $BC$ sao cho $BD : DC = 3 : 1.$ Giả sử $T$ là điểm trên đường thẳng đi qua $C$ và song song với $MD$ sao cho $\angle CTA = 150^\circ.$ Tìm số đo $\angle MTD.$
+	Chúng ta tự gọi mình là \textit{Homo sapiens} con người thông thái bởi vì trí thông minh rất quan trọng đối với chúng ta. Trong hàng nghìn năm, chúng ta đã cố gắng hiểu cách chúng ta suy nghĩ và hành động -- nghĩa là làm thế nào bộ não của chúng ta, chỉ là một số ít vật chất, lại có thể nhận thức, hiểu, dự đoán và điều khiển một thế giới rộng lớn và phức tạp hơn chính nó rất nhiều. Từ thời cổ đại, những huyền thoại và truyền thuyết về những sinh vật nhân tạo được ban cho ý thức hoặc trí thông minh bởi những người thợ bậc thầy đã xuất hiện và được lưu truyền. Đến thế kỷ $19$ và nửa đầu thế kỷ $20$, ý tưởng về con người nhân tạo và cỗ máy biết suy nghĩ cũng được phát triển trong các tác phẩm văn học, điển hình như quái vật Monster có sức mạnh phi thường nhưng ý thức được sự cô đơn của mình trong Frankenstein của Mary Shelley, hay anh chàng người thiếc Woodman luôn khao khát có một trái tim trong Phù thủy xứ Oz của Frank Baum.
 	\begin{figure}[H]
 		\vspace*{-5pt}
 		\centering
 		\captionsetup{labelformat= empty, justification=centering}
-		\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-		\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
-		\begin{tikzpicture}[cackithi,scale=1.2,node font=\small]
-			\draw[color=uuuuuu] (1.8771681255350392,1.9481399025612232) -- (1.90851486019539,2.1110223138105475) -- (1.7456324489460657,2.1423690484708984) -- (1.7142857142857149,1.979486637221574) -- cycle; 
-			\draw [shift={(1.7142857142857149,1.979486637221574)},color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-130.8933946491309:0.23457748258628952) arc (-130.8933946491309:-10.893394649130876:0.23457748258628952) -- cycle;
-			\draw  (2.,0.) circle (2.cm);
-			\draw  (2.,3.4641016151377553)-- (2.5,2.5980762113533165);
-			\draw  (2.3109450177226596,3.0662755356334794) -- (2.1890549822773426,2.9959022908575927);
-			\draw  (3.,1.7320508075688776)-- (2.5,2.5980762113533165);
-			\draw  (2.689054982277343,2.129876887073154) -- (2.8109450177226605,2.2002501318490406);
-			\draw  (3.,1.7320508075688776)-- (3.5,0.8660254037844388);
-			\draw  (3.3109450177226583,1.3342247280646016) -- (3.1890549822773413,1.263851483288715);
-			\draw  (3.5,0.8660254037844388)-- (4.,0.);
-			\draw  (3.8109450177226587,0.4681993242801627) -- (3.6890549822773417,0.3978260795042762);
-			\draw  (0.,0.)-- (2.,0.);
-			\draw  (0.9706778146767137,0.07037324477588658) -- (0.9706778146767137,-0.07037324477588658);
-			\draw  (1.029322185323286,0.07037324477588658) -- (1.029322185323286,-0.07037324477588658);
-			\draw  (2.,0.)-- (4.,0.);
-			\draw  (2.9706778146767134,0.07037324477588658) -- (2.9706778146767134,-0.07037324477588658);
-			\draw  (3.0293221853232857,0.07037324477588658) -- (3.0293221853232857,-0.07037324477588658);
-			\draw  (2.5,2.5980762113533165)-- (2.,0.);
-			\draw  (3.,1.7320508075688776)-- (2.,0.);
-			\draw  (2.5756061103843018,0.8562325387809366) -- (2.453716074938985,0.9266057835568232);
-			\draw  (2.5462839250610156,0.8054450240120545) -- (2.4243938896156987,0.8758182687879411);
-			\draw  (1.7142857142857149,1.979486637221574)-- (3.,1.7320508075688776);
-			\draw  (2.,3.4641016151377553)-- (1.7142857142857149,1.979486637221574);
-			\draw  (1.7142857142857149,1.979486637221574)-- (0.,0.);
-			\draw  (2.,0.)-- (1.7142857142857149,1.979486637221574);
-			\draw  (1.7916802919345747,0.9506685609177279) -- (1.9309831895863658,0.9707752022822663);
-			\draw  (1.7833025246993495,1.0087114349393076) -- (1.9226054223511404,1.0288180763038461);
-			\draw  (1.7142857142857149,1.979486637221574)-- (2.5,2.5980762113533165);
-			\draw  (2.0636107016266734,2.3440746880399277) -- (2.1506750126590424,2.233488160534963);
-%			\begin{scriptsize}
-				\draw [fill=white] (0.,0.) circle (1.5pt);
-				\draw[color=ududff] (-0.17754689709133267,-0.15347137061022087) node {$A$};
-				\draw [fill=white] (4.,0.) circle (1.5pt);
-				\draw[color=ududff] (4.23250977553091,-0.16520024473953532) node {$B$};
-				\draw [fill=white] (2.,3.4641016151377553) circle (1.5pt);
-				\draw[color=uuuuuu] (2.086125809866361,3.6818704696755975) node {$C$};
-				\draw [fill=white] (2.,0.) circle (1.5pt);
-				\draw[color=uuuuuu] (2.0157525650904744,-0.21211574125679306) node {$M$};
-				\draw [fill=white] (3.,1.7320508075688776) circle (1.5pt);
-				\draw[color=uuuuuu] (3.1769111038926074,1.922539350278433) node {$R$};
-				\draw [fill=white] (2.5,2.5980762113533165) circle (1.5pt);
-				\draw[color=uuuuuu] (2.649111768073456,2.8022049099770157) node {$D$};
-				\draw [fill=white] (3.5,0.8660254037844388) circle (1.5pt);
-				\draw[color=uuuuuu] (3.3763019640909535,0.6558209443124747) node {$F$};
-				\draw [fill=white] (1.7142857142857149,1.979486637221574) circle (1.5pt);
-				\draw[color=uuuuuu] (1.5935130964351534,2.1688457069940363) node {$R'$};
-				\draw (2.2386011735474494,1.7700639865973455) node[below] {$120^{\circ}$};
-%			\end{small}
-		\end{tikzpicture}
-		\vspace*{-5pt}
+		\includegraphics[width= 0.4\linewidth]{Tin_Woodman.png}
+		\caption{\small\textit{\color{cackithi}Hình $1$: Phác họa của Tin Woodman. Nguồn: Wiki.}}
+		\vspace*{-10pt}
 	\end{figure}
-	\textit{Lời giải.} Gọi $\ell$ là đường thẳng đi qua $C$ song song với $MD.$ Giả sử đường tròn đường kính $AB$ cắt $BC$ tại $R$ và cắt $\ell$ tại $R'.$  Ta sẽ chứng minh  $R'$ trùng với  $T.$ 
+	Ở khía cạnh khác, các nhà triết học qua hàng thế kỷ đã cố gắng mô tả quá trình suy nghĩ của con người như sự thao tác của các biểu tượng (ký tự). Công trình này đạt đến đỉnh cao với việc phát minh ra máy tính kỹ thuật số có thể lập trình vào những năm $1940$, một cỗ máy dựa trên bản chất trừu tượng của suy luận toán học. 
 	\vskip 0.1cm
-	Dễ thấy tam giác cân $MBR$ có góc $\angle MBR=60^\circ$ nên nó là tam giác đều. Do đó $R$ là trung điểm $BC$ và $D$ là trung điểm $RC.$ Trong tam giác $CRR',$ $MD$ đi qua trung điểm của $CR$ và song song $CR'$ nên nó phải đi qua trung điểm của $RR'.$ Do $MD$ là đường kính, ta suy ra $MD\perp RR'.$ Do $CR'$ song song với $MD,$ ta suy ra $\angle CR'R=90^\circ.$ 
+	Máy tính điện tử và những ý tưởng đằng sau nó đã truyền cảm hứng cho một số nhà khoa học đến từ nhiều lĩnh vực khác nhau (toán học, tâm lý học, kỹ thuật, kinh tế và khoa học chính trị), và họ bắt đầu thảo luận nghiêm túc về khả năng xây dựng  bộ não điện tử -- một bộ não nhân tạo có khả năng suy nghĩ và suy luận giống như bộ não của con người.
 	\vskip 0.1cm
-	Mặt khác, do $\angle AR'R=180^\circ - \angle ABR= 180^\circ-60^\circ=120^\circ,$ ta có 
-	\begin{align*}
-		\angle AR'C&=360^\circ-\angle AR'R - \angle CR'R \\
-		&= 360^\circ -120^\circ - 90^\circ=150^\circ.
-	\end{align*}
-	Như vậy $R'$ trùng với $T.$ Do $R$ và $R'$ đối xứng nhau qua $MD$ ta có $\angle MR'D=\angle MRD= 120^\circ.$  Như vậy $\angle MTD=120^\circ.$  
+	\textbf{\color{cackithi}Bài kiểm tra Turing}
 	\vskip 0.1cm
-	{\bf\color{cackithi} OC$\pmb{48.}$} Cho các số nguyên $a, b, c$ và số nguyên tố lẻ $p.$ Chứng minh rằng tồn tại các số nguyên $x$ và $y$ sao cho $p$ là ước của $x^2 + y^2 + ax + by + c.$      
+	Năm $1950$, nhà toán học kiệt xuất người Anh Alan Turing -- cha đẻ của máy tính hiện đại -- đã thảo luận về cách chế tạo những cỗ máy thông minh và để xuất một phương pháp để kiểm tra trí thông minh của chúng. Trong công trình nổi tiếng ``Computing machinery and
+	intelligence"(Máy tính và trí thông minh), ông xem xét câu hỏi \textit{``Máy móc có thể suy nghĩ được không?"}. Turing cho rằng vì các từ ``suy nghĩ" và ``máy móc" không thể được định nghĩa rõ ràng nên chúng ta có thể thay thế câu hỏi trên bằng một câu hỏi khác, có liên quan chặt chẽ với nó, được diễn đạt bằng những từ tương đối rõ ràng và có thể kiểm chứng, chẳng hạn \textit{``Liệu \textbf{\color{cackithi}máy tính điện tử} có thể \textbf{\color{cackithi}làm} những điều mà chúng ta (những thực thể có trí tuệ) có thể làm?"}.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Alan-Turing.jpg}
+		\caption{\small\textit{\color{cackithi}Hình $2$: Alan Turing. Nguồn: AFP/Getty Images.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Để trả lời cho câu hỏi trên, Turing đề xuất một phương pháp gọi là ``Trò chơi bắt chước" (Imitation game), sau này được biết đến rộng rãi với tên gọi \textit{Bài kiểm tra Turing}. Bài kiểm tra có sự tham gia của ba thành viên được xếp vào ba căn phòng tách biệt: Một người thẩm vấn (C), một máy tính(A) và một người phản biện (B) (HìnH $3$). Người thẩm vấn cố gắng xác định đâu là máy tính bằng cách đặt câu hỏi cho hai thành viên còn lại. Mọi giao tiếp đều thông qua bàn phím và màn hình hiển thị. Người thẩm vấn có thể đặt những câu hỏi sâu sắc và có phạm vi rộng tùy thích, và máy tính được phép làm mọi thứ có thể để đánh lừa người thẩm vấn. Người phản biện đóng vai trò giúp người thẩm vấn nhận dạng chính xác. Trò chơi diễn ra nhiều lần, với những người khác nhau đóng vai trò thẩm vấn và phản biện, và nếu có đủ tỷ lệ người thẩm vấn không thể phân biệt được máy tính với con người, thì máy tính được coi là thông minh.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Turing_test}
+		\caption{\small\textit{\color{cackithi}Hình $3$: Bài kiểm tra Turing.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Bài kiểm tra Turing được coi là đề xuất nghiêm túc đầu tiên trong triết lý trí tuệ nhân tạo. Dù bản thân sự mô tả khá đơn giản, việc chế tạo một cỗ máy có khả năng vượt qua bài kiểm tra lại có ý nghĩa sâu rộng. Cỗ máy đó sẽ phải xử lý ngôn ngữ tự nhiên, có thể học hỏi từ cuộc trò chuyện, ghi nhớ những gì đã được nói và truyền đạt ý tưởng trở lại con người, hiểu các khái niệm chung và hiển thị những gì chúng ta gọi là lẽ thường. 
 	\vskip 0.1cm
-	\textit{Lời giải.}
-	Khi tính giá trị  $f(x)=x^2+ax+c$ modulo $p,$ với $x \in \{0, 1, \cdots, p - 1\}$ ta được ít nhất $\frac{p+1}{2}$  số phân biệt. Thật vậy, nếu $x_1$ và $x_2$ là hai số nguyên phân biệt nằm giữa $0$ và $p-1$, và $p$ là ước của  $f(x_1)-f(x_2) = x_1^2 +ax_1+c-(x_2^2 +ax_2+c) = (x_1-x_2)(x_1+x_2+a)$,
-	thì $p$ cũng là ước của $x_1 + x_2 + a$, nghĩa là với mỗi $x_1\in \{0, 1, \cdots, p - 1\}$ có nhiều nhất
-	một $x_2\in \{0, 1, \cdots, p - 1\}$  sao cho $f(x_2)\equiv f(x_1) \mod p.$ 
+	Ý tưởng về một vấn đề khó khăn, lâu dài như vậy là chìa khóa để định hình lĩnh vực AI vì nó đi thẳng vào trọng tâm của vấn đề -- thay vì giải quyết một vấn đề nhỏ, nó xác định mục tiêu cuối cùng có thể kéo nghiên cứu theo nhiều con đường. Nếu không có tầm nhìn về những gì AI có thể đạt được, bản thân lĩnh vực này có thể sẽ không bao giờ hình thành hoặc đơn giản vẫn chỉ là một nhánh của toán học hay triết học. 
 	\vskip 0.1cm
-	Lập luận tương tự cho thấy các giá trị của đa thức $g(y) = -y^2 - by$ với  $y \in \{0, 1, \cdots, p - 1\}$ ta cũng nhận được ít nhất $\frac{p+1}{2}$ số phân biệt modulo $p.$ Như vậy, ta có hai tập các số dư modulo $p,$  mỗi tập có nhiều hơn $\frac{p}{2}$ số dư, do đó hai tập này phải có ít nhất một phần tử chung. Ta suy ra $p$ là ước của $f(x) - g(y)$ với các số nguyên $x$ và $y$ nào đó. Ta được điều cần chứng minh.  
+	\textbf{\color{cackithi}Sự ra đời của AI}
 	\vskip 0.1cm
-	Trong phần cuối của chuyên mục kỳ này, chúng tôi sẽ giới thiệu với bạn đọc ba bài toán chọn lọc trong kỳ thi Olympic toán vùng Trung Mỹ và Caribê năm $2023$. Các bài toán này phù hợp với trình độ học sinh lớp $8-10$.
+	Năm $1952$, nhà khoa học máy tính Arthur Samuel tại IBM đã viết chương trình học chơi cờ đam trên máy tính IBM $701$, đánh dấu sự ra đời của lĩnh vực học máy. Máy tính IBM càng chơi càng tiến bộ, có thể nghiên cứu những nước đi nào tạo nên chiến lược chiến thắng và kết hợp những nước đi đó vào chương trình của mình. Sự thành công này đã bác bỏ quan niệm trước đây rằng máy tính không thể “học” mà chỉ làm được những điều được lập trình sẵn.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Samuel_Checker.jpeg}
+		\caption{\small\textit{\color{cackithi}Hình $4$: Samuel chơi cờ với máy tính trên truyền hình. Nguồn: IBM.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Năm $1955$, hai nhà khoa học Allen Newell và Herbert Simon tại Đại học Carnegie Mellon cùng lập trình viên Cliff Shaw tại Tập đoàn Nghiên cứu và Phát triển (RAND) đã cho ra đời \textit{Logic Theorist}, một chương trình được thiết kế để mô phỏng kỹ năng giải quyết vấn đề của các nhà toán học. Chương trình khám phá cây tìm kiếm với gốc là giả thuyết ban đầu, mỗi nhánh là một suy luận dựa trên các quy tắc logic. Đâu đó trên cây là mệnh đề mà chương trình dự định chứng minh. Con đường dọc theo các nhánh dẫn từ giả thuyết đến mệnh đề cần phải chững minh là một chứng minh. Logic Theorist đã chứng minh được $38$ trong số $52$ định lý đầu tiên trong chương hai bộ sách nổi tiếng \textit{Principia Mathematica} của Whitehead và Russell, trong đó có những chứng minh mới và ngắn hơn. Logic Theorist đã giới thiệu Lý luận thông qua tìm kiếm và Phương pháp suy nghiệm (Heuristic)\footnote{\color{cackithi}Phương pháp giải quyết vấn đề hoặc tự khám phá bằng cách sử dụng những biện pháp nhanh chóng để tạo ra các giải pháp đủ tốt trong một khoảng thời hạn giới hạn.}, những khái niệm trọng tâm trong nghiên cứu AI sau này.
 	\vskip 0.1cm
-	{\bf\color{cackithi} OC$\pmb{55.}$} Tìm tất cả các cách tô màu các số nguyên dương sao cho điều kiện sau thỏa mãn:  
+	Mùa hè năm $1956$, Hội thảo về trí tuệ nhân tạo đầu tiên do Marvin Minsky, Nathaniel Rochester, Claude Shannon và John McCarthy tổ chức đã diễn ra ở Đại học Dartmouth. Trong số những người tham dự có Arthur Samuel, Herbert A. Simon và Allen Newell. Dưới sự thuyết phục của McCarthy, ``Trí tuệ nhân tạo" (Artificial Intelligence) đã được mọi người công nhận để chỉ lĩnh vực nghiên cứu mới, được Minsky định nghĩa như \textit{``lĩnh vực khoa học chế tạo máy móc làm được những việc đòi hỏi trí thông minh của con người"}. Hội thảo Dartmouth đã được công nhận rộng rãi như sự ra đời của trí tuệ nhân tạo như một lĩnh vực học thuật. Mặc dù không thu được những kết quả như kỳ vọng nhưng hội thảo đã là chất xúc tác cho hai mươi năm nghiên cứu AI sau đó.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Newell_Simon.jpeg}
+		\caption{\small\textit{\color{cackithi}Hình $5$: Herbert Simon (trái) và Allen Newell (phải). Nguồn: Đại học Carnegie Mellon.}}
+		\vspace*{-10pt}
+	\end{figure}
+	\textbf{\color{cackithi}Đợt bùng nổ đầu tiên}
 	\vskip 0.1cm
-	$\bullet$ Mỗi số có màu xanh hoặc đỏ;
+	Từ năm $1957$ đến năm $1974$, lĩnh vực AI phát triển mạnh mẽ. Sự ra đời của bóng bán dẫn thay thế đèn chân không giúp máy tính lưu trữ nhiều thông tin hơn, trở nên nhanh hơn, rẻ hơn và dễ tiếp cận hơn. Các thuật toán học máy cũng được cải thiện và mọi người hiểu rõ hơn rằng thuật toán nào sẽ áp dụng cho vấn đề của họ.
+	\begin{figure}[H]
+		\vspace*{5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Dartmouth.jpg}
+		\caption{\small\textit{\color{cackithi}Hình $6$: Hội thảo Dartmouth năm $1956$.\\ Nguồn: IEEE Spectrum.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Năm $1957$, Herbert Simon, Cliff Shaw và Allen Newell phát triển \textit{General Problem Solver}, hay GPS, một chương trình có mục đich giải quyết các vấn đề chung. GPS có thể giải được nhiều câu đố ấn tượng trong logic, hình học, đố chữ hay cờ vua thông qua phương pháp thử và sai (trial and error). GPS (cùng với Logic Theorist) đặt nền móng cho AI biểu tượng (Symbolic AI), một nhánh của AI xem việc biểu diễn tri thức và lý luận dựa trên các quy tắc logic như là chìa khóa của trí thông minh. Với những đóng góp to lớn này, Newell và Simon được trao Giải thưởng Turing năm $1975$, giải thưởng danh giá được xem như Nobel của khoa học máy tính.\footnote{\color{cackithi}Herbert Simon cũng được trao Nobel kinh tế năm $1978$.}
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{perceptron_1.png}
+		\caption{\small\textit{\color{cackithi}Hình $7$: Frank Rosenblatt và Perceptron.\\ Nguồn: Researchgate.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Cùng năm $1957$, Frank Rosenblatt tại Phòng thí nghiệm hàng không Cornell đã xây dựng \textit{Perceptron}, mạng thần kinh nhân tạo (một lớp) đầu tiên lấy cảm hứng từ mô hình toán học của não bộ phát triển bởi Warren S. McCulloch và Walter Pitts những năm $1940$. Perceptron được viết trên IBM $704$, một máy tính $5$ tấn có kích thước của một căn phòng. Sau $50$ lần thử, máy tự học cách phân biệt các thẻ được đánh dấu bên trái với các thẻ được đánh dấu bên phải. Perceptron đánh dấu sự ra đời của chủ nghĩa kết nối, nền tảng của Mạng lưới thần kinh  và Học sâu được phát triển sau này.
 	\vskip 0.1cm
-	$\bullet$ Tổng của hai số (không nhất thiết phân biệt) cùng màu bất kỳ  có màu xanh.
+	Năm $1960$, John McCarthy \footnote{\color{cackithi}Giải thưởng Turing $1971$.} tại Viện Công nghệ Massachusetts (MIT) đã phát triển \textit{LISP}, một ngôn ngữ lập trình bậc cao dựa trên giải tích lambda. LISP trở nên rất quan trọng cho sự phát triển ban đầu của AI nhờ khả năng xử lý biểu tượng và tính linh hoạt trong việc quản lý các tác vụ phức tạp. Tuy vậy, phải đến đầu những năm $1970$, với sự ra đời của máy tính mạnh mẽ hơn sử dụng mạch tích hợp (chip silicon chứa nhiều bóng bán dẫn), các lập trình viên mới có thể triển khai các ứng dụng tri thức sâu rộng.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{eliza.jpeg}
+		\caption{\small\textit{\color{cackithi}Hình $8$: Tương tác với ELIZA.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Năm $1965$, Joseph Weizenbaum -- nhà khoa học máy tính và giáo sư tại MIT -- đã phát triển \textit{ELIZA}, một hệ thống xử lý ngôn ngữ tự nhiên mô phỏng bác sĩ. ELIZA trả lời các câu hỏi trong bối cảnh một buổi trị liệu tâm lý. ELIZA xác định các từ khóa từ dữ liệu đầu vào của người dùng và khớp chúng với các câu trả lời được lập trình sẵn. Một số người dùng tin rằng họ đang tương tác với một người khác cho đến khi chương trình đạt đến giới hạn và cuộc trò chuyện trở nên vô nghĩa. ELIZA là tiền thân của những chatbot ngày nay.
 	\vskip 0.1cm
-	{\bf\color{cackithi} OC$\pmb{56.}$} Octavio viết một số nguyên dương $n$ lên bảng  và sau đó anh bắt đầu một quá trình trong đó, ở mỗi bước, anh xóa số nguyên $k$ được viết trên bảng  và thay thế nó bằng một trong các số sau:
-	\begin{align*}
-		3k-1, \quad 2k+1, \quad \frac{k}{2},
-	\end{align*}
-	với điều kiện số mới viết là số nguyên.
+	Bị thu hút bởi những kỳ vọng cùng sự lạc quan của các nhà khoa học hàng đầu, chính phủ Mỹ đã tài trợ ồ ạt cho nghiên cứu AI. Chính phủ đặc biệt quan tâm đến một cỗ máy có thể phiên âm và dịch ngôn ngữ nói cũng như xỷ lý dữ liệu thông lượng cao. Cơ quan Nghiên cứu Quốc phòng Tiên tiến (DARPA) đã đầu tư hàng triệu USD để hỗ trợ nghiên cứu AI tại một số cơ sở nghiên cứu như MIT, Đại học Stanford, Đại học Carnegie Mellon cũng như một số phòng thí nghiệm nghiên cứu thương mại khác. Năm $1970$, Marvin Minsky (giáo sư tại MIT, giải thưởng Turing $1969$) nói với Tạp chí Life: \textit{"Từ ba đến tám năm nữa chúng ta sẽ có một cỗ máy có trí thông minh chung của một con người bình thường"}. 
 	\vskip 0.1cm
-	Chứng minh rằng với mọi số nguyên dương $n$, Octavio có thể viết lên bảng  số $3^{2023}$ sau hữu hạn bước.
+	\textbf{\color{cackithi}Mùa đông AI\footnote{\color{cackithi}Được mượn từ cụm từ ``Mùa đông hạt nhân", một lý thuyết thời chiến tranh lạnh cho rằng việc sử dụng hàng loạt vũ khí hạt nhân sẽ che khuất mặt trời bằng khói và bụi, khiến nhiệt độ toàn cầu giảm mạnh, Trái đất đóng băng và nhân loại tuyệt chủng.}}
 	\vskip 0.1cm
-	{\bf\color{cackithi} OC$\pmb{57.}$} Trong một cái ao có $n (n \geq 3)$  hòn đá  xếp thành vòng tròn. Một công chúa muốn đánh số những hòn đá với các số $1, 2, \dots, n$ theo thứ tự nào đó rồi đặt một số con cóc lên những hòn đá. Sau khi đặt tất cả các con cóc vào vị trí, chúng bắt đầu nhảy theo quy tắc sau: khi một con cóc đến hòn đá có đánh số $k$, nó đợi $k$ phút rồi nhảy sang hòn đá liền kề theo chiều kim đồng hồ.
+	Những kỳ vọng cao và những tuyên bố đầy tham vọng thường là con đường trực tiếp dẫn đến sự thất vọng. Các nhà nghiên cứu AI đã quá lạc quan trong việc thiết lập các mục tiêu của họ và đã đưa ra những giả định ngây thơ về những khó khăn mà họ sẽ gặp phải. Việc phá vỡ lớp sương mù ban đầu của AI đã bộc lộ một núi chướng ngại vật. 
 	\vskip 0.1cm
-	Hỏi số lượng cóc nhiều nhất là bao nhiêu để công chúa có thể đánh số các hòn đá và đặt các con cóc sao cho không bao giờ có hai con cóc ở trên cùng một hòn đá trong thời gian từ một phút trở lên?
+	Trước hết, AI gặp phải những rào cản công nghệ không thể vượt qua, chủ yếu là hạn chế về sức mạnh tính toán, bộ nhớ và tốc độ xử lý. Vào giữa những năm $1960$, các nhà nghiên cứu đã phát hiện ra sự khác biệt giữa sự tăng trưởng đa thức và tăng trưởng cấp số nhân trong độ phức tạp của bài toán. Độ phức tạp tăng trưởng theo cấp số nhân ngăn cản việc giải quyết các vấn đề mẫu lớn vừa phải trong một khoảng thời gian hợp lý. Điều này dẫn đến khái niệm quan trọng nhất trong lý thuyết độ phức tạp, tính đầy đủ $NP$ ($NP$--completeness) và câu hỏi cơ bản nhất của nó, liệu $P = NP$, trong đó ``$P$" là một lớp các câu hỏi mà một số thuật toán có thể \textit{giải} trong thời gian đa thức và ``$NP$" là lớp các câu hỏi mà câu trả lời (cho trước) có thể được \textit{xác minh} trong thời gian đa thức.\footnote{\color{cackithi}Một trong bảy bài toán thiên niên kỷ của viện toán Clay.} Nhiều bài toán tổ hợp và logic là $NP$--đầy đủ đòi hỏi thời gian giải theo cấp số nhân và các hệ thống không có khả năng giải quyết một cách hiệu quả.
+	\vskip 0.1cm
+	Thêm vào đó, các nhà nghiên cứu đã tập trung nhiều vào khía cạnh lý thuyết và đánh giá thấp sự phức tạp đến từ các vấn đề thực tiễn. Sau khi giải mã thành công mật mã của Đức trong thế chiến thứ hai, các nhà khoa học đã lầm tưởng rằng việc dịch văn bản giữa các ngôn ngữ sẽ không khó hơn việc giải mã mật mã. Trên thực tế, việc xử lý ngôn ngữ tự nhiên trong dịch máy đòi hỏi những hiểu biết sâu sắc về ngôn ngữ học. Người ta cần biết nghĩa của nhiều từ và hiểu chúng theo nhiều cách kết hợp. Nỗ lực tự động tra cứu từ điển và áp dụng các quy tắc ngữ pháp đã không đem lại kết quả. 
+	\vskip 0.1cm
+	Năm $1969$, trong cuốn sách \textit{Perceptron} (viết chung với Seymour Papert), Marvin Minsky đã công kích công trình Perceptron của Rosenblatt và chỉ những hạn chế của mạng lưới thần kinh nhân tạo. Cuốn sách có ảnh hưởng lớn và được xem là nguyên nhân chính dẫn đến sự đình trệ trong việc nghiên cứu mạng thần kinh những năm $1970$.
+	\vskip 0.1cm
+	Sau hai thập kỷ với hàng chục triệu đô la đầu tư mà không nhận được những giải pháp như kỳ vọng, cộng với những khó khăn về tài chính, chính phủ Mỹ và Anh lần lượt cắt giảm các nguồn tài trợ cho AI, dẫn đến sự sụt giảm đáng kể các hoạt động AI trong cả ngành công nghiệp và các viện nghiên cứu. Mùa đông AI đầu tiên kéo dài từ $1974$ đến $1980$.
+	\vskip 0.1cm
+	\textbf{\color{cackithi}Hệ thống chuyên gia}
+	\vskip 0.1cm
+	Vào những năm $1970$, nghiên cứu AI tập trung vào AI biểu tượng với trọng tâm là các lĩnh vực chuyên môn được đánh giá cao và phức tạp. Với ý tưởng \textit{``các hệ thống thông minh có được sức mạnh từ kiến thức mà chúng sở hữu chứ không phải từ các hình thức và sơ đồ suy luận cụ thể mà chúng sử dụng"}, Edward Feigenbaum \footnote{\color{cackithi}Giải thưởng Turing $1994$.} tại đại học Stanford cùng các đồng nghiệp đã phát triển các hệ thống chuyên gia -- hay hệ thống dựa trên tri thức -- chương trình máy tính mô phỏng quá trình ra quyết định của các chuyên gia. 
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Edward-Feigenbaum.jpeg}
+		\caption{\small\textit{\color{cackithi}Hình $9$: Edward Feigenbaum. Nguồn: Britannica.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Một hệ thống chuyên gia bao gồm hai thành phần cơ bản: cơ sở tri thức và công cụ suy luận. Cơ sở tri thức lưu trữ thông tin, được thu thập bằng cách phỏng vấn những người là chuyên gia trong lĩnh vực được đề cập và được sắp xếp thành một tập hợp các quy tắc, thường có cấu trúc ``NẾU--THÌ" (if--then). Chẳng hạn: ``NẾU bệnh nhân bị sốt VÀ bệnh nhân ho VÀ bệnh nhân khó thở THÌ bệnh nhân có thể bị viêm phổi". Công cụ suy luận cho phép hệ thống chuyên gia rút ra các suy luận từ các quy tắc trong cơ sở tri thức. Ví dụ: nếu cơ sở tri thức chứa quy tắc ``NẾU $x$ THÌ $y$" và ``NẾU $y$ THÌ $z$", công cụ suy luận có thể suy ra ``NẾU $x$ THÌ $z$". Sau đó, hệ thống chuyên gia có thể truy vấn người dùng (có thể không phải chuyên gia) ``$x$ có đúng trong tình huống mà chúng ta đang xem xét không?" Nếu câu trả lời là khẳng định, hệ thống sẽ tiến hành suy ra $z$.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 0.9\linewidth]{Expert_System.png}
+		\caption{\small\textit{\color{cackithi}Hình $10$: Hệ thống chuyên gia.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Sau thành công của hệ thống DENDRAL trong việc xác định các phân tử hữu cơ chưa biết và MYCIN trong việc chẩn đoán các bệnh truyền nhiễm vào thập niên $1970$, hệ thống chuyên gia thương mại được sử dụng rộng rãi trong chẩn đoán y tế, phân tích hóa học, tín dụng ủy quyền, quản lý tài chính, thăm dò dầu và khoáng sản, kỹ thuật di truyền, thiết kế và sản xuất ô tô, thiết kế lắp đặt máy tính, lập kế hoạch hàng không, sắp xếp hàng hóa và các dịch vụ v.v... Các hệ thống chuyên gia cho thấy những lợi thế khác biệt so với các chương trình máy tính truyền thống. Chúng có thể  cung cấp các lựa chọn và các vấn đề cho người ra quyết định cũng như hỗ trợ việc ra quyết định trong trường hợp quyết định đó vượt quá trình độ kiến thức và kinh nghiệm của họ. Ngược lại với con người, hệ thống chuyên gia có thể  lưu trữ vĩnh viễn kiến thức chuyên môn, đưa ra mức độ tham vấn nhất quán sau khi được lập trình. Với kiến thức có được từ nhiều chuyên gia, các hệ thống này có thể cung cấp, hỗ trợ việc ra quyết định một cách toàn diện. Theo khảo sát những năm $1980$, khoảng $2/3$ trong số $500$ tập đoàn lớn nhất của Mỹ lúc bấy giờ sử dụng hệ thống chuyên gia trong hoạt động kinh doanh thường nhật.
+	\vskip 0.1cm
+	Đứng trước những triển vọng to lớn, chính phủ nhiều nước đã đầu tư mạnh mẽ cho nghiên cứu và phát triển các hệ thống AI. Năm $1981$, Bộ Kinh tế, Thương mại và Công nghiệp Nhật Bản phân bổ ngân sách $850$ triệu USD cho dự án máy tính thế hệ thứ năm với tham vọng dẫn đầu thế giới về công nghệ máy tính. Mục tiêu của Nhật Bản là tạo ra những cỗ máy có thể nói chuyện với con người, dịch ngôn ngữ, diễn giải hình ảnh và suy luận như con người. Đáp lại, các chính phủ Mỹ, Anh và Châu Âu cũng đẩy mạnh tài trợ cho nghiên cứu AI. Đến năm $1985$, khoản đầu tư của Mỹ vào hệ thống chuyên gia AI đã đạt hơn $1$ tỷ USD. Vương quốc Anh cũng bắt đầu dự án Alvey trị giá $350$ triệu bảng Anh.
+	\vskip 0.1cm
+	Một lần nữa, kỳ vọng đã cao hơn nhiều so với mức thực tế có thể thực hiện được. Đến cuối những năm $1980$, các hệ thống chuyên gia dần bộc lộ nhiều vấn đề và hạn chế về công nghệ khó giải quyết. Trước tiên, việc thu thập dữ liệu và thiết kế các quy tắc đòi hỏi rất nhiều công sức. Trên thực tế, các chuyên gia chỉ có thể diễn đạt bằng lời một phần nhỏ kiến thức của họ. Thêm vào đó, những hệ thống nhiều hơn $200$ quy tắc có thể xuất hiện hiệu ứng ``hộp đen" -- chúng ta không rõ máy suy luận như thế nào.\footnote{\color{cackithi}Những hệ thống chuyên gia lớn thường có trên $1000$ quy tắc.} Các hệ thống chuyên gia cũng tỏ ra rất tốn kém để bảo trì. Chúng khó cập nhập, không có khả năng học và có thể mắc những sai lầm ngớ ngẩn khi được cung cấp thông tin đầu vào bất thường. 
+	\vskip 0.1cm
+	Từ cuối những năm $1980$, chính phủ Mỹ và Nhật Bản lần lượt chấm dứt các nguồn tài trợ cho AI để tập trung vào các dự án nhanh đem lại kết quả. Như một hệ quả AI trải qua mùa đông thứ hai, kéo dài đến năm $2000$.
+	\vskip 0.1cm
+	\textbf{\color{cackithi}Học máy và học sâu}
+	\vskip 0.1cm
+	Năm $1997$, đương kim vô địch cờ vua thế giới Gary Kasparov đã bị đánh bại bởi Deep Blue, một hệ thống chuyên gia chơi cờ vua của IBM. Trận đấu được công bố rộng rãi và trở thành biểu tượng trong lịch sử. Tuy vậy, thành công này không còn hỗ trợ cho sự phát triển của AI biểu tượng. Trên thực tế, Deep Blue và những hệ thống chuyên gia khác chỉ xử lý được một phạm vi rất hạn chế (như là là quy tắc của ván cờ), rất xa so sự phức tạp của thế giới thực.
+	\vskip 0.1cm
+	Từ những năm $1990$, trọng tâm của nghiên cứu về AI đã chuyển từ cách tiếp cận dựa trên tri thức sang cách tiếp cận dựa trên dữ liệu (học máy). Thay vì mã hóa quy tắc cho các hệ thống AI như trước kia, các nhà khoa học tạo ra các chương trình máy tính để phân tích lượng lớn dữ liệu và rút ra kết luận -- hay ``học" -- từ kết quả (Hình $12$). Sự chuyển dịch này là kết quả của sự phát triển của Internet. Học máy được hưởng lợi từ sự sẵn có ngày càng tăng của dữ liệu số và khả năng chia sẻ các dịch vụ của mình qua Internet. 
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{DeepBlue.jpg}
+		\caption{\small\textit{\color{cackithi}Hình $11$: Kasparov đối đầu Deep Blue. Nguồn: Sportshistoryweekly.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Nhằm giải quyết các vấn đề phức tạp cũng như cung cấp các giải pháp hữu ích trong các lĩnh vực ứng dụng khác nhau, các nhà nghiên cứu AI bắt đầu sử dụng và phát triển các công cụ toán học phức tạp hơn. Họ nhận ra rằng nhiều vấn đề về AI đã được các nhà nghiên cứu trong các lĩnh vực như toán học, kinh tế hoặc vận trù học giải quyết. Chẳng hạn, các mạng lưới thần kinh nhân tạo không gì khác hơn là các mô hình hồi quy phi tuyến tính và mô hình khác biệt (Discriminant models) và có thể được phân tích bằng phần mềm thống kê tiêu chuẩn, giống như nhiều mô hình thống kê khác". Sử dụng ngôn ngữ toán học cho phép sự cộng tác ở mức độ cao hơn giữa các lĩnh vực khác nhau và khiến AI trở thành một ngành khoa học chặt chẽ hơn.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 0.9\linewidth]{ML-TraditionalProgramming.jpeg}
+		\caption{\small\textit{\color{cackithi}Hình $12$: Sự khác nhau giữa các chương trình truyền thống và học máy. Trong học máy, dữ liệu đầu vào (data) và đầu ra (answers) được đưa vào thuật toán để tạo ra chương trình (rules). Chương trình này có thể được sử dụng để dự đoán kết quả trong tương lai. Nguồn: [$3$].}}
+		\vspace*{-10pt}
+	\end{figure}
+	Năm $2004$, Geoffrey Hinton (Đại học Toronto), Yoshua Bengio (Đại học Montreal) và Yann LeCun (Đại học New York) dưới sự tài trợ của chính phủ Canada đã bắt đầu một chương trình nghiên cứu để cập nhật mạng lưới thần kinh nhân tạo. Các thí nghiệm được tiến hành đồng thời tại Microsoft, Google và IBM với sự trợ giúp của phòng thí nghiệm của Hilton ở Toronto cho thấy kiểu học này đã thành công trong việc giảm một nửa tỷ lệ lỗi trong nhận dạng giọng nói. Nhóm nhận dạng hình ảnh của Hinton cũng đạt được kết quả tương tự. Thuật ngữ ``học sâu" được Geoffrey Hinton đặt cho các thuật toán mới này. Trong một thời gian ngắn, phần lớn các nhóm nghiên cứu đã chuyển sang sử dụng công nghệ này với những lợi ích không thể chối cãi.\footnote{\color{cackithi}Bengio, Hilton và LeCun được trao Giải thưởng Turing năm $2018$ cho việc cách mạng hóa lĩnh vực học sâu.} 
+	\begin{figure}[H]
+		\vspace*{5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{turing-2018-bengio-hinton-lecun.jpg}
+		\caption{\small\textit{\color{cackithi}Hình $13$: Giải thưởng Turing $2018$. Nguồn: AMC.}}
+		\vspace*{-15pt}
+	\end{figure}
+	Kể từ năm $2010$, lĩnh vực học sâu phát triển chóng mặt. 
+	\vskip 0.1cm
+	Năm $2011$, IBM Watson, một hệ thống máy tính có khả năng trả lời các câu hỏi được đặt ra bằng ngôn ngữ tự nhiên đã thắng trò chơi Jeopardy \footnote{\color{cackithi}Chương trình đố vui ngược với hình thức hỏi đáp truyền thống trên truyền hình của Mỹ. Thí sinh được cung cấp những manh mối kiến thức chung dưới dạng câu trả lời và họ phải diễn đạt từng câu trả lời dưới dạng một câu hỏi.} trước Ken Jennings và Brad Rutter, hai trong số những thí sinh thành công nhất trong chương trình này, và giành được $1$ triệu USD. Máy tính của IBM áp dụng các công nghệ xử lý ngôn ngữ tự nhiên tiên tiến, truy xuất thông tin, biểu diễn tri thức, lý luận tự động và học máy vào lĩnh vực trả lời câu hỏi trong miền mở. Cùng năm, Apple cho ra mắt Siri, trợ lý ảo đầu tiên được sử dụng rộng rãi.
+	\vskip 0.1cm
+	Năm $2016$, AlphaGo, phát triển bởi DeepMind, đã đánh bại Lee Sedol, một trong số những kỳ thủ cờ vây xuất sắc thế giới. Vì tính phức tạp của nó, cờ vây (Go) lúc đó được coi là nằm ngoài tầm với của AI trong ít nhất một thập kỷ nữa. AlphaGo sử dụng mạng lưới thần kinh nhân tạo sâu, được đào tạo thông qua học tăng cường. Một năm sau, AlphaGo được nâng cấp thành AlphaZero, chương trình mạnh mẽ hơn có thể chơi được cả cờ vua, cờ vây và cờ tướng Nhật Bản (Shogi).
+	\vskip 0.1cm
+	Vào tháng $11$ năm $2020$, mô hình AlphaFold của DeepMind, một hệ thống học sâu được thiết kế để xác định cấu trúc ba chiều của protein, đã mang lại kết quả cực kỳ chính xác, tạo ra một bước tiến vượt bậc trong cái mà các nhà khoa học gọi là ``vấn đề gấp protein". Vào tháng $7$ năm $2022$, DeepMind thông báo rằng AlphaFold có thể xác định cấu trúc của gần 200 triệu protein từ $1$ triệu loài, bao gồm hầu hết mọi loại protein mà con người biết đến. Khả năng của AlphaFold đã mở ra cánh cửa cho các nhà nghiên cứu y tế phát triển rất nhiều các loại thuốc và vắc xin phục vụ nhân loại.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Deep-Neural-Network.png}
+		\caption{\small\textit{\color{cackithi}Hình $14$: Một ví dụ về mạng thần kinh nhân tạo sâu đơn giản gồm lớp đầu vào, lớp đầu ra và $3$ lớp ẩn. Mỗi nơron trong một lớp được kết nối với tất cả các nơron ở lớp trước (và sau).}}
+		\vspace*{-10pt}
+	\end{figure}
+	Những thành công và triển vọng to lớn được mở ra bởi lĩnh vực học máy, đặc biệt là học sâu đã thúc đẩy các tập đoàn công nghệ tư nhân như Google, Microsoft, Facebook, Tesla, Alibaba v.v... đầu tư mạnh mẽ vào AI, được theo sau bởi các chính phủ. Năm $2022$, tổng vốn đầu tư tư nhân cho AI toàn cầu đạt $92$ tỷ USD, trong đó Mỹ dẫn đầu với $47{,}4$ tỷ USD, theo sau là Trung Quốc với $13{,}4$ tỷ USD. Năm $2018$, Chính phủ Trung Quốc đưa ra quy trình gồm ba giai đoạn đầy tham vọng với mục tiêu đưa Trung Quốc trở thành trung tâm AI ``chính" của thế giới vào năm $2030$. Cùng năm, Ủy ban châu Âu dự định phân bổ $1$ tỷ Euro để đầu tư cho AI mỗi năm. Con số này dự định sẽ tăng lên $20$ tỷ Euro mỗi năm vào thập kỷ tới. Các quốc gia Ấn Độ, Hàn Quốc, Canada, Nhật Bản, Israel, Nga và Singapore cũng đầu tư mạnh mẽ cho AI.
+	\vskip 0.1cm
+	\textbf{\color{cackithi}Định luật Moore}
+	\vskip 0.1cm
+	Những tiến bộ mà AI đạt được có sự đóng góp to lớn của những tiến bộ trong công nghệ máy tính. 
+	\vskip 0.1cm
+	Năm $1965$, Gordon E. Moore -- một trong những người tiên phong về mạch tích hợp, nhà đồng sáng lập và giám đốc điều hành của Intel sau này -- đưa ra dự đoán rằng số lượng bóng bán dẫn có thể được tích hợp trên một đơn vị không gian của mạch tích hợp sẽ tăng gấp đôi mỗi năm. Năm $1975$, ông sửa lại ước tính của mình thành tăng gấp đôi sau mỗi hai năm. Dự đoán này được gọi là \textit{Định luật Moore}. Các phép đo quan trọng khác cũng cho thấy hành vi nhân đôi tương tự, chẳng hạn như tốc độ bộ xử lý và dung lượng bộ nhớ phù hợp với máy tính. 
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Gordon_E._Moore.jpg}
+		\caption{\small\textit{\color{cackithi}Hình $15$: Gordon E. Moore. Nguồn: Intel.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Trong suốt sáu thập kỷ qua, Định luật Moore được sử dụng như kim chỉ nam trong ngành công nghiệp bán dẫn. Tầm quan trọng của Định luật không chỉ ở việc dung lượng bộ nhớ ngày càng lớn và tốc độ máy tính ngày càng nhanh theo thời gian mà các kỹ sư có thể dự đoán quy mô lớn hơn và nhanh hơn bao nhiêu. Điều này giúp họ lập kế hoạch dài hạn cho các dự án phát triển phần mềm và phần cứng. 
+	\vskip 0.1cm
+	Định luật Moore có tác động lâu dài đến sự phát triển của AI. Việc tăng gấp đôi tốc độ phần cứng  hoặc gấp đôi bộ nhớ sẽ cải thiện quy mô của vấn đề mà ta có thể xử lý hiệu quả. Cách Deep Blue được mã hóa không khác nhiều so với các chương trình chơi cờ vua $30$ năm trước đó. Điều khác biệt ở đây là Deep Blue có khả năng tìm kiếm $200$ triệu thế cờ mỗi giây kế hợp với thông tin trong kho dữ liệu khổng lồ để chọn nước đi. Nó đưa ra một chút lời giải thích cho quá trình nghiên cứu AI: các nhà khoa học tạo ra các chương trình vượt quá sức mạnh tính toán hiện tại, sau đó chờ Định luật Moore bắt kịp.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{Disk.png}
+		\caption{\small\textit{\color{cackithi}Hình $16$: Ổ cứng dung lượng $5$ MB năm $1956$ có giá trên $50{>}000$ USD so với thẻ nhớ $1$ TB ($1000{.}000$ MB) năm $2020$ có giá $100$ USD.}}
+		\vspace*{-10pt}
+	\end{figure}
+	Từ năm $2010$, đã có những dấu hiệu cho thấy định luật Moore đang chậm lại. Tuy vậy, sự gia tăng dữ liệu cũng như sức mạnh tính toán mới đã đem đến động lực mới to lớn, dẫn đến sự bùng nổ của học sâu. Các nhà khoa học phát hiện ra hiệu quả rất cao của bộ xử lý card đồ họa máy tính (GPU) trong việc đẩy nhanh quá trình tính toán các thuật toán học máy. Từ năm $2010$, tốc độ tính toán tăng theo cấp số nhân trước kia thậm chí còn nhanh hơn nữa, đạt gấp đôi chỉ trong vòng $6$ tháng. PaLM, một mô hình ngôn ngữ tự nhiên của Google, lớn hơn $5$ triệu lần so với AlexNet, hệ thống AI có tính toán đào tạo lớn nhất $10$ năm trước. Những đột phá trong công nghệ lượng tử, khoa học máy tính, toán học, vật lý hay học máy đều đóng vai trò là những bước đột phá tiềm năng vượt qua giới hạn của Định luật Moore.
+	\vskip 0.1cm
+	\textbf{\color{cackithi}Tương lai}
+	\vskip 0.1cm
+	Bây giờ chúng ta quay trở lại hiện tại. Rất nhiều các ứng dụng thông minh đã hiện hữu trong cuộc sống hàng ngày, nhiều công nghệ mới chỉ gần đây còn là khoa học viễn tưởng giờ đã trở thành hiện thực. Vậy điều gì đang chờ đợi chúng ta phía trước?
+	\vskip 0.1cm
+	Theo Rodney Brooks, giáo sư Robotics tại MIT, thì việc dự đoán tương lai của AI là rất khó khăn. Ông dẫn ra luật Amara nổi tiếng:
+	\textit{``Chúng ta có xu hướng đánh giá quá cao tác động của một công nghệ trong thời gian ngắn và đánh giá thấp tác động về lâu dài."}
+	Luật Amara trình bày một mô hình được tìm thấy trong nhiều công nghệ mới nổi. Một lời hứa lớn trước mắt, sự thất vọng, và rồi sự tự tin dần dần tăng lên vượt xa những gì mong đợi ban đầu hướng tới. Nhiều công nghệ được đánh giá quá cao trong ngắn hạn, trong khi lợi ích lại được tích lũy về lâu dài. 
+	\vskip 0.1cm
+	Trước mắt, các mô hình ngôn ngữ lớn (Large Language Models) và AI tạo sinh (Generative AI) đang tạo ra những bước đột phá lớn tiếp theo. Người ta có thể tưởng tượng việc tương tác với một hệ thống chuyên gia trong một cuộc trò chuyện trôi chảy hoặc có một cuộc trò chuyện bằng hai ngôn ngữ khác nhau được dịch theo thời gian thực. Chúng ta cũng có thể kỳ vọng sẽ thấy những chiếc ô tô không người lái trên đường trong nhiều năm tới.
+	\vskip 0.1cm
+	Cũng giống nhiều mô hình trí tuệ nhân tạo khác, học sâu còn nhiều vấn đề cần được giải quyết, bao gồm các cuộc tấn công đối nghịch, tạo ra nội dung giả (deepfake), sự công bằng, trách nhiệm giải trình, tính minh bạch và các cân nhắc về đạo đức khác.
+	\vskip 0.1cm
+	Mặc dù không thể phủ nhận rằng những tiến bộ gần đây đã đẩy nhanh sự phát triển của trí tuệ nhân tạo nhưng hiện nay chúng vẫn còn một khoảng cách rất xa so với trí tuệ thực sự. Có rất nhiều điều mà các mô hình học sâu chưa thể làm được. Mạng lưới thần kinh được lấy cảm hứng từ não bộ con người nhưng chưa thực sự giống. Trí thông minh mà học sâu mang lại cho máy tính có thể rất xuất sắc trong các nhiệm vụ được xác định trong phạm vi hẹp -- chơi trò chơi cụ thể, nhận ra những âm thanh hay hình ảnh cụ thể  -- nhưng chúng chưa có khả năng thích ứng và linh hoạt như trí thông minh của con người. Về lâu dài, mục tiêu của trí tuệ nhân tạo là trí thông minh tổng quát, tức là một cỗ máy vượt qua khả năng nhận thức của con người trong mọi nhiệm vụ. Điều này giống với hình dáng của robot có tri giác mà chúng ta thường thấy trong những bộ phim khoa học viễn tưởng. Để làm được điều đó, cần có những đột phát trong rất nhiều lĩnh vực như khoa học máy tính, khoa học thần kinh, sinh học hay toán học. 
+	\vskip 0.1cm
+	Nhìn chung, chúng ta chưa thể xác định một cách chắc chắn rồi AI sẽ phát triển đến đâu. Liệu sắp tới có xảy ra một mùa đông tiếp theo hay không? Song chúng ta hoàn toàn có thể tiếp tục chờ đợi và hy vọng vào những bước tiến mới, những sự đột phá tiếp theo của ngành này trong tương lai.  
+	\vskip 0.1cm
+	\textbf{\color{cackithi}Tài liệu}
+	\vskip 0.1cm
+	[$1$] European Commission, Joint Research Centre, Delipetrev, B., Tsinaraki, C., Kostić, U., \textit{AI watch, historical evolution of artificial intelligence -- Analysis of the three main paradigm shifts in AI}, Publications Office, $2020$
+	\vskip 0.1cm
+	[$2$] Council of Europe, \textit{History of Artificial Intelligence.}
+	\vskip 0.1cm	
+	[$3$] Craglia M., (Ed.), \textit{Artificial Intelligence -- A European Perspective.}, EUR $29425$ EN, Publications Office, Luxembourg, $2018$
+	\vskip 0.1cm
+	[$4$] Các bài viết về cùng chủ đề trên Wikipedia và Encyclopaedia Britannica.
 \end{multicols}

@@ -10,188 +10,332 @@
 \endgroup
 \vspace*{185pt}
 
+	\textit{\textbf{LTS.} Trong số này, tạp chí Pi giới thiệu đến bạn đọc một bài viết đạt giải trong kỳ thi Bài giảng và bài viết Toán học, mang tên Hoàng Tuỵ, năm $2022$. Bài viết về chủ đề giảng dạy Toán theo chương trình Toán học $2018$ -- Chương trình Giáo dục Phổ thông mới.}
 \begin{multicols}{2}
-	Lưu Huy là một nhà toán học Trung Quốc nổi tiếng với cuốn sách \textit{Cửu chương toán thuật}. Trong đó, chương số $7$ mang tên ``\textit{Thừa và thiếu}" trình bày một phương pháp thú vị để giải các bài toán thực tế với nhiều ví dụ từ dễ đến khó. Bài viết này giới thiệu toàn bộ các bài tập trong chương này, trừ một số bài cuối là các bài toán tìm lời giải dạng gần đúng.
+	\textbf{I.	Đặt vấn đề}
+	\vskip 0.1cm
+	Trong quá trình tìm các Bài toán thực tế, và xem trò chơi dân gian ``Ô ăn quan" chúng tôi phát hiện ra có sự tương đồng rất lớn giữa bài toán tập hợp hữu hạn với tập hợp các viên sỏi trong trò chơi ``Ô ăn quan". Từ đó chúng tôi nghĩ đến câu hỏi có thể sử dụng phương pháp ô ăn quan để giải các bài Toán tập hợp đếm được, hữu hạn hay không? Áp dụng cho một số Bài toán ban đầu chúng tôi thấy cách giải là rất đẹp và dễ hiểu. Chúng tôi đặt tên cho cách giải đó là ``phương pháp ô ăn quan"
+	\vskip 0.1cm
+	Với ý muốn là sẽ tạo một cách giải hết sức trực quan chúng tôi quyết định nghiên cứu sâu hơn về các Bài toán tập hợp được phát biểu dưới dạng các bài Toán cổ, ngoài ra chúng ta có thể giải quyết được một số bài ở mức độ phức tạp hơn, khi chứa nhiều biến trong một bài toán.
+	\vskip 0.1cm
+	Môn toán ở trường Tiểu học giúp học sinh có những kiến thức cơ bản và sơ giản ban đầu về số học, hình học, các yếu tố đại lượng và hình thành các kĩ năng toán học góp phần hình thành phương pháp học tập, làm việc có kế hoạch, chủ động, sáng tạo giúp các em học tập tốt các môn học khác trong nhà trường và chuẩn bị cho các bậc học tiếp theo. Trong bài viết này chúng tôi sẽ giải một lớp các Bài toán đó bằng phương pháp ``Ô ăn quan" từ các bài toán rất quen thuộc ở Tiểu học đến một số bài ở chương trình Toán THPT.
+	\vskip 0.1cm
+	Với ý tưởng như trên trong bài viết này chúng tôi sẽ trình bày những kết quả đạt được đạt được trong quá trình chuyển tải phương pháp ``Ô ăn quan" vào giải các bài Toán tập hợp của chương trình Toán Phổ thông mới.
+	\vskip 0.1cm
+	\textbf{II.	Giải các Bài toán tập hợp bằng phương pháp ``Ô ăn quan"}
+	\vskip 0.1cm
+	Các bài toán cổ này thường có nhiều cách giải mà mỗi bậc học có thể được trang bị một cách, tuy nhiên đây là các bài toán có tính logic cao nên học sinh phải có năng lực Toán học khá mới dùng được các phương pháp như vẽ biểu đồ, đặt ẩn giải hệ phương trình, hoặc biểu đồ Ven. Trong phương pháp ô ăn quan chúng tôi đưa ra đơn giản chỉ là viên sỏi, ô trống và rải, các kiến thức có thể nói rất thực tế, dẫn đến học sinh không cần đòi hỏi quá nhiều kiến thức về Toán vẫn có thể lĩnh hội được.
+	\vskip 0.1cm
+	\textbf{Bài toán $\pmb{1}$: Gà và chó}
+	\begin{center}
+		``Vừa gà vừa chó\\
+		Bó lại cho tròn\\
+		$36$ con, $100$ chân chẵn "
+	\end{center}
+	Hỏi có bao nhiêu con gà, bao nhiêu con chó?
+	\vskip 0.1cm
+	\textit{Lời giải.}
+	Theo bài ta có: tổng số con gà và con chó có tất cả $36$ con và $100$ chân.
+	\vskip 0.1cm
+	Bây giờ ta vẽ $36$ ô và $100$ viên sỏi. Trong $36$ ô mỗi ô ta rải vào $2$ viên sỏi hết $72$ viên sỏi, còn lại $28$ viên sỏi. Rải tiếp $28$ viên sỏi còn lại vào các ô, mỗi ô thêm $2$ viên sỏi. Khi đó, có $14$ ô chứa $4$ viên sỏi và $22$ ô chứa $2$ viên sỏi. Hay có $14$ con chó và $22$ con gà.
 	\begin{figure}[H]
 		\vspace*{-5pt}
 		\centering
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 0.7\linewidth]{1}
-		\caption{\small\textit{\color{diendantoanhoc}Lưu Huy ($220-280$.)}}
-		\vspace*{-10pt}
+		\includegraphics[width= 1\linewidth]{1}
+		\vspace*{-15pt}
 	\end{figure}
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{1.}$} Một nhóm người góp tiền mua hàng. Nếu mỗi người bỏ ra $8$ đồng thì thừa $3$ đồng. Nếu mỗi người bỏ ra $7$ đồng thì thiếu $4$ đồng. Hỏi có bao nhiêu người và họ bỏ ra bao nhiêu tiền?
-	\vskip 0.1cm
-	\textit{Phương pháp:} Để giải bài toán này, trước hết ta cần thiết lập công thức cho bài toán tổng quát:
-	\vskip 0.1cm
-	Mỗi người bỏ ra $A$ đồng thì mua được toàn bộ lượng hàng và thừa ra $a$ đồng.
-	\vskip 0.1cm
-	Mỗi người bỏ ra $B$ đồng thì khi mua toàn bộ lượng hàng sẽ thiếu $b$ đồng.
-	\vskip 0.1cm
-	Phương pháp giải được tiến hành sao cho lượng tiền thừa và lượng tiền thiếu ở hai phát biểu bằng nhau. Ta lập luận như sau:
-	\vskip 0.1cm
-	Mỗi người bỏ ra $Ab$ đồng thì mua được $b$ lần lượng hàng và thừa ra $ab$ đồng.
-	\vskip 0.1cm
-	Mỗi người bỏ ra $aB$ đồng thì khi mua $a$ lần lượng hàng và thiếu $ab$ đồng.
-	\vskip 0.1cm
-	Khi cộng vào, lượng thừa và thiếu bằng nhau sẽ triệt tiêu hết, ta được:
-	\vskip 0.1cm
-	Mỗi người bỏ ra $Ab+aB$ đồng thì mua được vừa đủ $(a+b)$ lần lượng hàng.
-	\vskip 0.1cm
-	Do đó số tiền thực tế mỗi người bỏ ra khi mua hàng là: $\dfrac{Ab + aB}{a + b}$ $(1)$.
-	\vskip 0.1cm
-	Ta nhận thấy khi số tiền mỗi người bỏ ra thay đổi từ $A$ thành $B$ thì tổng số tiền tất cả mọi người bỏ ra sẽ thay đổi từ thừa $a$ thành thiếu $b$, tức là giảm đi một lượng $a+b$. Do đó, số người là:
-	\begin{align*}
-		m = \frac{a + b}{A-B}.
-	\end{align*}
-	Giá trị của lượng hàng sẽ bằng số tiền mỗi người bỏ ra nhân với số người, tức là:
-	\begin{align*}
-		\frac{Ab+ aB}{a + b} \cdot \dfrac{a+b}{A-B}= \frac{Ab+ aB}{A-B}.
-	\end{align*}
-	Lưu Huy cũng trình bày một cách giải thứ hai cho dạng toán này. Trong đó, số người được tính theo lập luận như trên còn giá trị hàng hóa được tính trực tiếp theo $n \cdot A - a$ hoặc $n \cdot B - b$.
-	\vskip 0.1cm
-	Cách giải thứ hai này ngắn hơn nhưng cách giải thứ nhất sẽ trợ giúp chúng ta giải được những bài toán phức tạp hơn tiếp theo.
-	\vskip 0.1cm
-	Việc cân bằng giữa đại lượng thừa và đại lượng thiếu là đặc trưng cơ bản của phương pháp này. Tên gọi đầy đủ của nó trong sách là ``doanh bất túc thuật" (doanh: tràn đầy, bất túc: không đủ, thuật: phương pháp).
-	\vskip 0.1cm
-	\textit{Đáp số}: Với dữ liệu của bài toán số $1$, ta có $A=8,a=3,B=7,b=4$. Thay vào công thức ta được số tiền mỗi người bỏ ra là $\frac{53}{7}$, số người là $7$, giá trị hàng hóa là $53$.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{2.}$} Cùng mua gà, mỗi người trả $9$ thì thừa $11$, mỗi người trả $6$ thì thiếu $16$. Hỏi có bao nhiêu người và gà giá bao nhiêu.
-	\vskip 0.1cm
-	\textit{Đáp số}: Làm tương tự bài số $1$, ta được đáp án là $9$ người và giá trị số gà là $70$.
-	\vskip 0.1cm
-	Bài số $3$ và bài số $4$ tương tự bài số $1$ và bài số $2$ nhưng có sự xuất hiện của phân số. Bạn đọc có thể tự giải. Lưu Huy còn đưa ra phương pháp kết hợp việc quy đồng mẫu số vào trong quá trình giải, nhưng cách làm này phức tạp hơn và không quá cần thiết do học sinh đã quen thuộc với tính toán phân số nên sẽ không trình bày ở đây.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{3.}$} Mỗi người bỏ ra $\dfrac{1}{2}$ đồng thì thừa $4$. Mỗi người bỏ ra $\dfrac{1}{3}$ đồng thì thiếu $3$. Hỏi có bao nhiêu người và giá mua là bao nhiêu?
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{4.}$} Hôm nay người ta cùng mua bò. Nếu cứ mỗi $7$ hộ trả chung $190$ thì thiếu $330$. Nếu mỗi $9$ hộ trả chung $270$ thì thừa $30$. Hỏi có bao nhiêu hộ và giá bò là bao nhiêu?
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{5.}$} Hôm nay người ta cùng mua vàng. Mỗi người bỏ ra $400$ thì thừa $3400$. Mỗi người bỏ $300$ thì thừa $100$. Hỏi có bao nhiêu người và giá vàng là bao nhiêu?
-	\vskip 0.1cm
-	\textit{Phương pháp:}
-	\vskip 0.1cm 
-	Bắt đầu từ bài toán:
-	\vskip 0.1cm
-	Mỗi người bỏ ra $A$ đồng thì mua được toàn bộ lượng hàng và thừa ra $a$ đồng.
-	\vskip 0.1cm
-	Mỗi người bỏ ra $B$ đồng thì khi mua toàn bộ lượng hàng sẽ thừa $b$ đồng.
-	\vskip 0.1cm
-	Lập luận như sau:
-	\vskip 0.1cm
-	Mỗi người bỏ ra $Ab$ đồng thì mua được $b$ lần lượng hàng và thừa ra $ab$ đồng.
-	\vskip 0.1cm
-	Mỗi người bỏ ra $aB$ đồng thì khi mua $a$ lần lượng hàng và thừa $ab$ đồng.
-	\vskip 0.1cm
-	Thay vì cộng như trong bài số $1$ thì ta tiến hành trừ để hai lượng tiền thừa ra triệt tiêu nhau. Bạn đọc có thể tự hoàn thiện các công thức còn thiếu để cho ra đáp số.
-	\vskip 0.1cm
-	\textit{Đáp số:} $33$ người, giá vàng là $3800$.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{6.}$} Hôm nay người ta cùng mua cừu. Nếu mỗi người trả $5$ thì thiếu $45$. Nếu mỗi người trả $7$ thì thiếu $3$. Hỏi có bao nhiêu người và giá cừu là bao nhiêu.
-	\vskip 0.1cm
-	\textit{Phương pháp:} Bài toán thiếu và thiếu này tương tự như bài toán thừa và thừa, bạn đọc có thể tự giải.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{7.}$} Hôm nay người ta cùng mua chó. Nếu mỗi người trả $5$ thì thiếu $90$. Nếu mỗi người trả $50$ thì vừa đủ. Hỏi có bao nhiêu người và giá chó là bao nhiêu?
-	\vskip 0.1cm
-	\textit{Phương pháp:} Bài toán thiếu và đủ này có thể được giải tương tự bài toán thừa thiếu theo cách $2$ của bài số $1$, với $a=0$. Giá trị của số hàng có thể được tính trực tiếp theo công thức: $n\cdot B$.
-	\vskip 0.1cm
-	\textit{Đáp số:} Số người là $\dfrac{90}{50-5} = 2$. Giá chó là $2\cdot 50=100$.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{8.}$} Hôm nay người ta cùng mua lợn. Nếu mỗi người trả $100$ thì thừa $100$. Nếu mỗi người trả $90$ thì vừa đủ. Hỏi có bao nhiêu người và giá lợn là bao nhiêu?
-	\vskip 0.1cm
-	\textit{Phương pháp:} Bài toán thừa và đủ cũng tương tự bài toán thiếu và đủ, khi giải ta cho $b=0$.
-	\vskip 0.1cm
-	\textit{Đáp số:} Số người là $\dfrac{100}{100-90}$. Giá lợn là $10\cdot90=900$.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{9.}$} Giả sử có một lượng gạo đã xát trong một cái thùng $10$ đấu, không rõ là có bao nhiêu gạo. Đổ đầy thùng bằng kê chưa xát. Sau khi xát được $7$ đấu cả gạo lẫn kê đã xát. Biết mỗi đấu kê chưa xát sau khi xát được $6$ thăng (đơn vị đo thể tích: $1$ đấu = $10$ thăng). Hỏi ban đầu có bao nhiêu đấu gạo.
-	\vskip 0.1cm
-	\textit{Phương pháp:} Tuy phát biểu bài toán tương đối phức tạp, nhưng bài toán này có thể đưa về dạng thừa và thiếu, thừa và thừa hoặc thiếu và thiếu. Ta cần chọn hai giá trị bất kỳ cho số gạo ban đầu trong thùng để tiến hành thiết lập các giả định.
-	\vskip 0.1cm
-	Giả sử ban đầu có $1$ đấu gạo xát rồi trong thùng, vậy có $9$ đấu kê chưa xát. Sau khi xát được $1$ đấu gạo và $5$ đấu $4$ thăng kê. Tức là thiếu $6$ thăng so với thực tế.
-	\vskip 0.1cm
-	Giả sử ban đầu có $3$ đấu gạo xát rồi trong thùng, vậy có $7$ đấu kê chưa xát. Sau khi xát được $3$ đấu gạo và $4$ đấu $2$ thăng kê. Tức là thừa $2$ thăng so với thực tế.
-	\vskip 0.1cm
-	Quy tất cả về thăng, ta được bài toán thừa và thiếu với $A=30,a=2,B=10,b=6$.
-	\vskip 0.1cm
-	\textit{Đáp số:} Dùng công thức để tính số tiền mỗi người phải đóng trong bài số $1$, ta được số gạo ban đầu là: $\dfrac{30 \times 6 + 10\times 2}{2 +6}$ thăng tức $2$ đấu rưỡi.
-	\vskip 0.1cm
-	\textit{Nhận xét:} Trong bài toán số $1$, cách giải đầu tiên sử dụng công thức ($1$) có vẻ phức tạp hơn nhưng nó cho phép chúng ta tìm nhanh đáp án cho những bài toán phức tạp như bài toán số $9$ này. Tùy vào các giá trị giả định mà ta thu được một trong ba dạng bài toán thừa và thiếu, thừa và thừa hoặc thiếu và thiếu.
-	\vskip 0.1cm
-	\textit{Mở rộng:} Thuật toán của Lưu Huy trong bài toán này thực tế là phương pháp nội suy cho hàm số tuyến tính $y=ax+b$. Trong một số trường hợp, $a$ và $b$ không xuất hiện trong đầu bài nhưng ta có thể tính được $y$ khi biết $x$ theo một phương thức khác nào đó như trên. Ta có thể chọn hai giá trị bất kỳ $x_1,x_2$ của $x$, tính các giá trị $y_1,y_2$ tương ứng rồi dùng nội suy để xác định giá trị $x$ sao cho $y=0$ mà không cần tính trực tiếp $a$ và $b$. Ví dụ trong bài số $9$ trên, $x$ là số đấu gạo ban đầu còn $y$ là mức độ chênh lệch giữa số đấu lương thực còn lại sau khi xát của trường hợp giả định so với thực tế. Trong khi đó, phương pháp giả thiết tạm mà nhiều sách tham khảo cho học sinh giỏi giới thiệu để giải các bài toán như bài \textit{vừa gà vừa chó} dựa trên việc tìm một nghiệm thỏa mãn phương trình thứ nhất rồi thay đổi các biến nhưng vẫn giữ cho điều kiện này không đổi cho đến khi thỏa mãn điều kiện thứ hai. Với những trường hợp phức tạp hơn như bài số $9$, việc suy luận tìm ra áp dụng phương pháp giả thiết tạm là tương đối khó trong khi phương pháp thừa và thiếu có thể được áp dụng một cách trực tiếp. Việc chọn hai giá trị nào để sử dụng cho phương pháp thừa và thiếu là bất kỳ. Ta cũng có thể sử dụng cách chọn giá trị của phương pháp giả thiết tạm (tất cả $36$ con vật toàn là gà hoặc toàn là chó trong bài \textit{vừa gà vừa chó}): giả sử ban đầu $10$ đấu toàn là gạo, sau khi xát vẫn có $10$ đấu, thừa $3$ đấu so với thực tế; lại giả sử ban đầu tất cả là kê, sau khi xát được $6$ đấu, thiếu $1$ đấu so với thực tế. Khi đó: $A=100,a=30,B=0,b=10$. Cần chú ý rằng vào thời kỳ của Lưu Huy, toán học cổ Trung Quốc chưa có số $0$ đứng riêng biệt nên cách chọn như trên không xuất hiện trong chương $7$ của \textit{Cửu chương toán thuật}.
-	\vskip 0.1cm
-	\PIbox{
-	Về mặt lịch sử, phương pháp sử dụng hai dự đoán không chính xác để từ đó tìm kết quả đúng cũng xuất hiện trong các tài liệu Arab thời Trung Cổ, với tên gọi \linebreak al--khatā'ayn (sai kép). Qua các công trình của Fibonacci, phương pháp này cũng xuất hiện ở châu Âu thế kỷ $13$ cũng với tên gọi này.}
-	\vskip 0.1cm
-	Bài toán chuyển động cũng có thể quy về dạng toán thừa và thiếu bằng cách giả định như bài số $9$. Những bài toán này có công thức giải trực tiếp thuận tiện hơn nhiều nhưng vẫn được trình bày ở đây làm tài liệu tham khảo cho bạn đọc (bài số $10$ và bài số $11$).
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{10.}$} Bức tường cao $9$ thước. Từ nóc tường, cây dưa mọc xuống dưới mỗi ngày $7$ tấc (đơn vị đo độ dài: $1$ thước = $10$ tấc). Từ chân tường, cây mướp mọc lên mỗi ngày $1$ thước. Hỏi sau bao nhiêu ngày chúng gặp nhau, và khi đó mỗi dây dài (cao) bao nhiêu?
-	\vskip 0.1cm
-	\textit{Phương pháp:} Ta cũng chọn hai giá trị thời gian bất kỳ để xét tính thừa thiếu.
-	\vskip 0.1cm
-	Giả sử thời gian hai cây đã mọc là $1$ ngày. Mỗi cây lần lượt mọc được $7$ tấc và $1$ thước, tổng cộng là $17$ tấc, thiếu $73$ tấc so với chiều cao của tường.
-	\vskip 0.1cm
-	Giả sử thời gian hai cây đã mọc là $10$ ngày. Mỗi cây lần lượt mọc được $70$ tấc và $10$ thước, tổng cộng là $170$ tấc, thừa $80$ tấc so với chiều cao của tường.
-	\vskip 0.1cm
-	Ta được bài toán thừa và thiếu với $A=1,a=73,B=10,b=80$.
-	\vskip 0.1cm
-	\textit{Đáp số:} Thời gian gặp nhau của hai cây là $\dfrac{1\times80 + 10\times73}{73 + 80} =5\dfrac{5}{17}$ ngày.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài toán số $\pmb{11.}$} Cây thứ nhất ngày đầu tiên mọc được $3$ thước. Cây thứ hai ngày đầu tiên mọc được một thước. Sau đó, mỗi ngày cây thứ nhất mọc một nửa so với ngày đầu còn cây thứ hai mọc gấp đôi ngày đầu. Hỏi sau bao lâu hai cây cao bằng nhau?
-	\vskip 0.1cm
-	\textit{Phương pháp:} Tương tự bài số $10$ nhưng ta đem so khoảng cách đã mọc của cây thứ hai với cây thứ nhất. Nếu nhỏ hơn thì là thiếu, nếu dài hơn thì là thừa. Bạn đọc có thể tự giải theo hướng này.
-	\vskip 0.1cm
-	\textit{Đáp số:} $2\dfrac{6}{13}$ ngày.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài số $\pmb{12.}$} Giả sử rằng một đấu rượu tốt có giá $50$ đồng còn một đấu rượu thường có giá $10$ đồng. Một người mua tổng cộng hai đấu rượu với giá $30$ đồng. Hỏi có bao nhiêu rượu tốt và rượu thường đã được mua.
-	\vskip 0.1cm
-	\textit{Phương pháp:} Bài này tương tự bài số $9$. Ta chọn hai giá trị cho lượng rượu tốt trong tổng số $2$ đấu rượu (ví dụ $1$ đấu và $2$ đấu) rồi so tổng số tiền với số tiền rượu trong thực tế ($30$ đồng). 
-	\vskip 0.1cm
-	\textit{Đáp số:} $2$ thăng rưỡi rượu tốt, $1$ đấu $7$ thăng rưỡi rượu thường.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài số $\pmb{13.}$} Giả sử rằng $5$ cái bình lớn và $1$ cái bình nhỏ chứa được $3$ hộc, $1$ cái bình lớn và $5$ cái bình nhỏ chứa được $2$ hộc. Hỏi mỗi bình lớn hoặc bình nhỏ chứa được bao nhiêu. (Chú thích: $1$ hộc = $10$ đấu).
-	\vskip 0.1cm
-	\textit{Phương pháp:} Lưu Huy đưa bài toán này về dạng thừa và thiếu như sau:
-	\vskip 0.1cm
-	Giả sử bình lớn chứa được $5$ đấu, bình nhỏ cũng sẽ là $5$ đấu (do $5$ lớn + $1$ nhỏ chứa được $3$ hộc). Khi đó $1$ nhỏ + $5$ lớn sẽ chứa được $3$ hộc, nhiều hơn $10$ đấu so với thực tế ($2$ hộc).
-	\vskip 0.1cm
-	Tương tự, nếu bình lớn chứa được $5$ đấu rưỡi (tức $5$ đấu $5$ thăng) thì $1$ nhỏ + $5$ lớn sẽ bị thiếu $2$ đấu so với thực tế ($2$ hộc).
-	\vskip 0.1cm
-	Bạn đọc có thể tự giải tiếp phần sau.
-	\vskip 0.1cm
-	\textit{Đáp số:} Bình lớn chứa được $\dfrac{13}{24}$ hộc. Bình nhỏ chứa được $\dfrac{7}{24}$ hộc.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài số $\pmb{14.}$} Giả sử có $3$ đấu sơn. Cứ $3$ thăng sơn đổi được $4$ thăng dầu, cứ $4$ thăng dầu trộn được với $5$ thăng sơn. Từ lượng sơn ban đầu, lấy ra một phần để đổi dầu đủ để trộn hết với lượng sơn còn lại. Hỏi phải lấy bao nhiêu sơn để đổi, thu được bao nhiêu dầu và trộn với bao nhiêu sơn?
-	\vskip 0.1cm
-	\textit{Phương pháp:} Tương tự bài số $9$, giả sử hai giá trị khác nhau cho lượng sơn đem đi đổi dầu rồi xét khi trộn thì sơn bị thừa hay thiếu.
-	\vskip 0.1cm
-	\textit{Đáp số:} Lấy $1$ đấu $\dfrac{11}{4}$ thăng sơn đi đổi. 
-	\vskip 0.1cm
-	Các bài số $15$, $16$, $17$, việc quy về dạng thừa và thiếu có thể tiến hành tương tự các bài trước, bạn đọc có thể tiến hành tự giải.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài số $\pmb{15.}$} Giả sử một khối ngọc hình lập phương có cạnh $1$ tấc thì nặng $7$ lượng, một khối đá hình lập phương có cạnh $1$ tấc thì nặng $6$ lượng. Giả sử ta có một khối đá lập phương cạnh $3$ tấc, bên trong có ngọc. Tổng khối lượng là $11$ cân ($1$ cân bằng $16$ lượng). Hỏi ngọc nặng bao nhiêu, đá nặng bao nhiêu?
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài số $\pmb{16.}$} Một mẫu ruộng tốt giá $300$, $7$ mẫu ruộng xấu giá $500$. Người ta mua một khoảnh 100 mẫu với giá $1$ vạn đồng. Hỏi có bao nhiêu ruộng tốt và bao nhiêu ruộng xấu?
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Bài số $\pmb{17.}$} Giả sử $9$ thanh vàng nặng bằng $11$ thanh bạc. Sau khi đổi $1$ thanh vàng thành $1$ thanh bạc, bạc nặng hơn vàng là $13$ lượng. Hỏi ban đầu mỗi loại nặng bao nhiêu?
-	\vskip 0.1cm
-	Các bài toán thừa và thiếu cũng xuất hiện nhiều trong các tài liệu Hán Nôm cổ của Việt Nam. Nhiều bài toán từ các nguồn này đã được PGS. TS. Tạ Duy Phượng giới thiệu trong các số $188+189$, $192+193$, và $209+210$ của tạp chí Toán Tuổi thơ $2$. Bạn đọc có thể tìm những số này để tham khảo thêm. Các bài toán trong bài viết cũng đã được tác giả giảng dạy cho lớp K$3$ của câu lạc bộ Toán học UMC do Pi và Viện Toán học phối hợp tổ chức. Hiện nay, \textit{Cửu chương toán thuật} đã có các bản dịch ra nhiều ngôn ngữ nhưng chưa có bản tiếng Việt. Những nội dung khác có giá trị cho việc dạy và học toán từ cuốn sách này sẽ tiếp tục được Pi giới thiệu với độc giả khi có điều kiện.
-	\vskip 0.1cm
-	\textbf{\color{diendantoanhoc}Tài liệu tham khảo}
-	\vskip 0.1cm
-	[$1$] Boman, E. C. ($2009$). False Position, Double False Position and Cramer's Rule. \textit{The College Mathematics Journal}, $40(4)$, $279-283$. \url{https://doi.org/10.4169/193113409x458732}
-	\vskip 0.1cm
-	[$2$] Schwartz, R. K. ($2004$). \textit{Issues in the Origin and Development of Hisāb al--Khatā'ayn (Calculation by Double False Position)}. Presented at the Eighth Maghrebian Colloquium on the History of Arab Mathematics (COMHISMA$8$), Radès, Tunisia.
-\end{multicols}
-\vspace*{-10pt}
-{\color{diendantoanhoc}\rule{1\linewidth}{1pt}}
-\vskip 0.2cm
-\centerline{\Large{\textbf{\color{diendantoanhoc}LỜI GIẢI, ĐÁP ÁN}}}
-\vskip 0.1cm
-\begin{multicols}{2}
-	\textbf{\color{diendantoanhoc}Đố vui}
-	\vskip 0.1cm
-	Buratino có thể chia $15$ đồng xu của mình thành $3$ nhóm với số lượng xu tương ứng là $7, 4,4$;  $5, 5, 5$; $3, 6, 6$ hoặc $1, 7, 7$.
-	\vskip 0.1cm
-	Ở lần cân thứ nhất, Buratino đặt $2$ nhóm xu có số lượng bằng nhau lên $2$ đĩa cân. Xét trường hợp cân thăng bằng. Khi này tất cả các đồng xu trong $2$ nhóm đó là các đồng xu thật và đồng xu giả nằm ở nhóm còn lại. Sau đó, ở lần cân thứ hai, Buratino đặt nhóm đồng xu chứa đồng xu giả lại lên $1$ chiếc đĩa và đặt lên chiếc đĩa còn lại một số đồng xu (lấy từ $2$ nhóm chỉ đã cân) bằng với số đồng xu của nhóm chứa đồng xu giả. Như vậy, nếu nhóm chứa đồng xu giả nặng hơn thì đồng xu giả là của Basile còn nếu nhẹ hơn thì là của Alice. Xét trường hợp cân không thăng bằng ở lần cân đầu tiên. Khi này tất cả các đồng xu ở nhóm còn lại là thật. Ở lần cân thứ $2$, Buratino bỏ các đồng xu ở bên nhẹ hơn ra khỏi đĩa và chia các đồng xu ở bên nặng hơn
-	\vskip 0.1cm
-	\hfill \textit{(Xem tiếp trang $39$)}
+	\textbf{Bài toán $\pmb2$: Thuyền to -- Thuyền nhỏ}
+	\begin{center}
+		``Thuyền to chở được $6$ người,\\
+	Thuyền nhỏ chở được $4$ người là đông.\\
+	Một đoàn trai gái sang sông,\\
+	$10$ thuyền to nhỏ giữa dòng đang trôi.\\
+	Toàn đoàn có cả 100 người, Trên bờ còn 48 người đợi sang"
+	\end{center}
+	Hỏi có bao nhiêu thuyền to, bao nhiêu thuyền nhỏ
+	\vskip 0.1cm
+	\textit{Lời giải}.
+	Toàn đoàn có $100$ người, trên bờ còn $48$ người đợi sang, có $52$ người đang ngồi trên $10$ thuyền.
+	\vskip 0.1cm
+	Theo bài ta có: Tổng số thuyền nhỏ và to có tất cả $10$ thuyền, $52$ người.
+	\vskip 0.1cm
+	Bây giờ ta vẽ $10$ ô và $52$ viên sỏi. Trong $10$ ô mỗi ô ta rải vào $4$ viên sỏi hết $40$ viên sỏi, còn lại $12$ viên sỏi. Bỏ tiếp $12$ viên sỏi còn lại vào các ô, mỗi ô thêm $2$ viên. Khi đó, có $6$ ô chứa $6$ viên sỏi và $4$ ô chứa $4$ viên sỏi. Hay có $6$ thuyền to và $4$ thuyền nhỏ.
+	\vskip 0.1cm
+	Phương pháp Ô ăn quan.
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{2}
+%		\caption{\small\textit{\color{}}}
+		\vspace*{-15pt}
+	\end{figure}
+	\textit{Nhận xét.}
+	Từ một bài toán tưởng chừng như đơn giản nhưng cách giải không hề đơn giản. Thông qua ví dụ trên ta thấy từ những trực quan cụ thể sẽ giúp cho học sinh hình dung ra được bài toán, khắc sâu được những kiến thức và dễ dàng tìm ra được kết quả chính xác.
+	\vskip 0.1cm
+	Vì vậy nếu chỉ rập khuôn máy móc các phương pháp giải hiện có thì sẽ rất khó khăn cho việc tìm ra đáp số bài toán.
+	\vskip 0.1cm
+	Ví dụ trên đã yêu cầu học sinh vận dụng được sự mềm dẻo, linh hoạt trong suy nghĩ để giải quyết bài toán. Đó là một yếu tố rất cần thiết, tránh sự cứng nhắc dẫn đến những cách giải cồng kềnh hoặc bế tắc.
+	\vskip 0.1cm
+	\textbf{Bài toán $\pmb3$: Bài toán lợn gà}
+	\begin{center}
+		Tối qua đếm đàn lợn gà\\
+	Thấy được trăm mắt còn đầu năm mươi\\
+	Một trăm hai chục chân tròn\\
+	Đố bạn biết có bao nhiêu gà và lợn?
+	\end{center}
+	\textit{Lời giải.}
+	
+	
+	
+	Có 50 cái đầu nên tổng số lợn và gà là 50 con và tổng số là 120 chân. Bây giờ ta vẽ 50 ô tượng trưng cho 50 con, và lấy 120 viên sỏi tượng trưng cho 120 cái chân.
+	Bây giờ ta sẽ rải đầy kín tất cả các ô, với mỗi ô hoặc hai viên sỏi, hoặc 4 viên sỏi. Khi đó số ô có 4 viên tức là có 4 chân chính là lợn, số ô có 2 viên tức là có 2 chân chính là gà.
+	Rõ ràng khi rải đầy các ô có hai viên mỗi ô, thì hết 100 viên, nên thừa 20 viên. 20 viên còn lại rải đủ cho 10 ô, để thêm mỗi ô 2 viên vậy số ô có 4 viên là 10 nên số lợn là 10 con, còn lại số ô có 2 viên là 40 ô vậy có 40 gà.
+	
+	
+	Bài toán 4: Cam – Quýt
+	
+	
+	
+	Quýt ngon mỗi quả chia 3 Cam ngon mỗi quả chia ra làm 10
+	Mỗi người 1 miếng chia đều Bổ 17 quả, 100 người đủ chia?"
+	
+	Hỏi có bao nhiêu quả cam và bao nhiêu quả quýt.
+	Lời giải:
+	Vì tổng số quả là 17 nên ta sẽ vẽ 17 ô, chia ra cho một 100 người nên có 100 miếng được chẻ ra nên ta sẽ lấy 100 viên sỏi để rải vào 17 ô.
+	Ta sẽ rải hết tất cả các ô sao cho mỗi ô hoặc có 3 viên hoặc có 10 viên.
+	
+	Đầu tiên ta sẽ rải 17 ô mỗi ô 3 viên hết 51 viên còn lại 49 ô, bây giờ sẽ rải sỏi còn lại vào các ô 10 viên tức là mỗi ô đó cộng thêm 7 viên ta sẽ rải được 7 ô. Vậy số ô 10 viên là 7 nên có 7 quả cam, số ô 3 viên là 10 nên có 10 quả quýt.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	Bài toán 5: Bài toán ``thương nhau cau sáu bổ ba"
+	``Thương nhau cau sáu bổ ba Ghét nhau cau sáu bổ ra làm mười. Mỗi người một miếng trăm người,
+	Có mười bảy quả hỏi người ghét yêu".
+	Hỏi có bao nhiêu quả cau ghét và bao nhiêu quả cau yêu.
+	Lời giải :
+	Ta coi 17 quả cau là 17 ô vuông và 100 miếng cau chia cho 100 người là 100 viên sỏi. Trong 17 ô vuông, mỗi ô vuông rải 3 viên sỏi hết 51 viên sỏi, còn lại 49 viên sỏi. Rải tiếp 49 viên còn lại vào các ô, mỗi ô thêm 7 viên. Khi đó, có 7 ô chứa 10 viên sỏi và 10 ô chứa 3 viên sỏi. Hay có 30 người tương ứng với 10 quả cau bổ 3 và 70 người ghét ứng với 7 quả cau bổ 10.
+	●●●●●
+	●●●●●	●●●	●●●	●●●	●●●●●
+	●●●●●
+	●●●●●
+	●●●●●	●●●	●●●	●●●●●
+	●●●●●	
+	●●●	●●●●●
+	●●●●●	●●●	●●●●●
+	●●●●●	
+	●●●	●●●	●●●	●●●●●
+	●●●●●	
+	
+	Bài toán 6: (Buôn cà phê)
+	
+	Người nọ mua một số cafe tốt và một số cafe xấu trộn lại cân nặng 50 kg, trả tất cả 7.800$. Biết rằng giá 1 kg cafe tốt 180$, giá 1 kg cafe xấu 120$. Hỏi người ấy mua mỗi hạng cafe mấy kg?
+	Lời giải :
+	Ta coi mỗi ô là 1 kg cà phê, có 50kg cà phê nên sẽ có 50 ô, bây giờ ta sẽ xem mỗi viên sỏi là 60$, tổng cộng là 7800$ nên sẽ ứng với 130 viên sỏi. Sau đó ta sẽ rải sỏi vào các ô, mà mỗi ô chỉ nhận 2 viên=120$ hoặc 3 viên=180$, số ô có 3 viên chính là cà phê tốt, số ô chỉ có 2 viên chính là cà phê xấu. Đầu tiên ta rải đủ 50 ô, mỗi ô 2 viên thì còn lại 30 viên, ta tiểp tục rải 30 viên còn lại mỗi ô thêm 1 viên cho đến khi hết sỏi, ta có hình vẽ.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	Nhìn vào bảng ta thấy có 30 ô chứa 3 viên sỏi, vậy có 30kg cà phê tốt, có 20 ô chứa hai viên sỏi nên có 20kg cà phê xấu
+	Bài toán 7: (Sọt cam, sọt quýt)
+	Có 8 sọt đựng tất cả 46 quả, mỗi sọt quýt đựng được 5 quả, mỗi sọt cam đựng được 7 quả. Hỏi có bao nhiêu sọt quýt, bao nhiêu sọt cam?
+	Lời giải :
+	Ta vẽ 8 ô tương ứng với 8 sọt, lấy 46 viên sỏi ứng với 46 quả, ta sẽ rải bi vào 8 ô, ô nào có 5 viên ứng với sọt quýt, ô nào có 7 quả ứng với sọt cam. Đầu tiên ta rải mỗi ô 5 quả, có 8 ô sẽ hết 40 quả, thừa 6 quả ta rải thêm mỗi ô 2 viên cho đến hết số sỏi ta được như hình vẽ
+	
+	Nhìn vào hình vẽ ta thấy có 5 ô chứa 5 viên sỏi vậy có 5 sọt quýt, có 3 ô chứa 7 viên sỏi vậy có
+	3 sọt cam.
+	
+	Bây giờ ta sẽ giải các bài Toán tập hợp có độ phức tạp cao hơn, đó là những bài toán và có từ 3 biến trở lên. Những bài toán này nếu giải bằng các cách thông thường sẽ hết sức phức tạp và đòi hỏi rất nhiều kỹ thuật. Nhưng với phương pháp ‘Ô ăn quan’’ ta sẽ có một lời giải rất dễ hiểu, đẹp đẽ và học sinh Tiểu học cũng có thể hiểu được.
+	
+	Bài toán 8: Lớp 5A có 35 học sinh (HS) làm bài kiểm tra toán cuối Kỳ II . Đề bài gồm có 3 bài toán. Giáo viên chủ nhiệm lớp báo cáo với Nhà trường rằng: Cả lớp mỗi em đều làm được ít nhất một bài, trong đó 20 em giải được bài toán thứ nhất, 14 HS giải được bài toán thứ hai, 10 HS giải được bài toán thứ ba, 5 HS giải được bài toán thứ hai và thứ ba, 2 HS giải được bài toán thứ nhất và thứ hai, chỉ có một HS được 10 điểm vì đã giải được cả ba bài. Học sinh nào giải được bài 3 thì làm ít nhất thêm được một bài khác.
+	Hỏi lớp học đó có bao nhiêu HS không dự kiểm tra?
+	Lời giải:
+	Trước hết ta vẽ bảng gồm có 35 ô ứng với 35 em học sinh lớp 5A. Ta lấy 20 tấm thẻ ký hiệu là số B1 ứng với số lần giải được bài toán 1, lấy 14 thẻ ký hiệu là B2 ứng với 14 lần giải được bài toán 2, 10 tấm thẻ đánh dấu là B3 ứng với 10 lượt giải được bài toán 3. Bây giờ ta sẽ rải thẻ vào các ô theo quy tắc đã cho. Đầu tiên ta rải 20 tấm thẻ B1 vào 20 ô, sau đó ta rải đến tấm thẻ B2 vào 2 ô có thẻ B1 và thêm 12 ô trống, hết thẻ B2 bây giờ ta rải thẻ B3, 1 tấm thẻ vào ô đã có 2 thẻ B1 và B2, tiếp tục rải 5 thẻ vào các ô chỉ có thẻ B2, do làm được bài 3 thì sẽ làm được hơn một bài do đó sẽ rải 4 thẻ còn lại vào các ô chỉ có B1. Sau khi rải hết thẻ mà ô nào còn trống có nghĩa là học sinh đó không đi thi.
+	
+	B1-B3	B1-B3	B1-B3	B1-B3	B1	B1	B1
+	B1	B1	B1	B1	B1	B1	B1
+	B1	B1	B1	B1	B1-B2	B1-B2-B3	B2-B3
+	B2-B3	B2-B3	B2-B3	B2-B3	B2	B2	B2
+	B2	B2	B2	B2			
+	Nhìn vào bảng sau khi rải hết các thẻ theo quy tắc trên ta thấy còn lại chỉ có 3 ô trống nên có 3 em học sinh không tham gia thi cuối kỳ II
+	
+	Bài toán 9: Trong 1 hội nghị có 100 đại biểu tham dự, mỗi đại biểu nói được một hoặc hai trong ba thứ tiếng: Nga, Anh hoặc Pháp. Có 39 đại biểu chỉ nói được tiếng Anh, 35 đại biểu nói được tiếng Pháp, có 12 đại biểu biết 2 thứ tiếng trong đó 8 đại biểu nói được cả tiếng Anh và tiếng Nga. Hỏi có bao nhiêu đại biểu chỉ nói được tiếng Nga, bao nhiêu đại biểu chỉ nói được tiếng Pháp?
+	Lời giải:
+	A	A	A	A	A	A	A	A	A	A
+	A	A	A	A	A	A	A	A	A	A
+	A	A	A	A	A	A	A	A	A	A
+	A	A	A	A	A	A	A	A	A	P
+	P	P	P	P	P	P	P	P	P	P
+	P	P	P	P	P	P	P	P	P	P
+	P	P	P	P	P	P	P	P	P	P
+	PN	PN	PN	P	NA	NA	NA	NA	NA	NA
+	NA	NA	N	N	N	N	N	N	N	N
+	N	N	N	N	N	N	N	N	N	N
+	
+	Ta vẽ 100 ô tương ứng với 100 đại biểu. Ta sẽ làm 39 thẻ chữ A ứng với 35 người nói được tiếng Anh, 35 thẻ chữ P ứng với 35 người biết nói tiếng Pháp và 8 thẻ chữ NA ứng với số lượng biết nói tiếng Nga, gọi thẻ chữ N là ký hiệu biết nói tiếng Nga.
+	Đầu tiên, ta sẽ rải 39 thẻ A vào 39 ô. Ta rải tiếp 35 thẻ chữ P vào các ô trống tiếp theo, tiếp tục rải tiếp 8 thẻ NA vào các ô trống còn lại. Bây giờ ta sẽ rải thẻ chữ N, vì mỗi đại biểu nói được ít nhất một thứ tiếng, nên những ô trống còn lại ta sẽ rải chữ N vào. Do có 12 đại biểu biết nói hai thứ tiếng mà lại có 8 người nói Anh và Nga do đó chắc chắn có 4 người nói tiếng Pháp thì nói được tiếng Nga (vì không thể cùng biết cả Anh và Pháp) do đó ta sẽ rải 4 thẻ chữ N vào 4 ô có chữ P. Khi đó ô nào mà chỉ có một mình chữ N là chỉ nói được tiếng Nga, những ô chỉ có chữ P là chỉ nói được tiếng Pháp. Nhìn vào bảng ta thấy: có 18 ô chữ N vậy có 18 đại biểu chỉ nói được tiếng Nga. Có 31 ô chỉ có chữ P nên có 31 đại biểu chỉ nói được tiếng Pháp
+	
+	Bài toán 10: 50 bạn học sinh lớp 12A đều đội 1 trong hai loại mũ: Mũ cứng hoặc mũ mềm, đi 1 trong 2 loại giày đen hoặc nâu, mặc 1 trong 2 loại áo: trắng hoặc xanh. Có 18 bạn đội mũ mềm, 19 bạn đi giầy đen, 11 bạn có áo trắng. Hỏi có thể chắc chắn có ít nhất bao nhiêu bạn vừa đi giày nâu, vừa đội mũ cứng và mặc áo xanh?
+	Lời giải:
+	Ta sẽ vẽ bảng gồm 50 ô, ta kí hiệu thẻ chữ M, C lần lượt ứng với đội mũ mềm và mũ cứng, thẻ Đ, N lần lượt cho giày đen và giày nâu, thẻ T, X cho mặc áo trắng và áo xanh.
+	Vì có 18 bạn đội mũ mềm ta rải 18 thẻ M vào 18 ô, các ô trống còn lại ta rải chữ C cho các bạn đội mũ cứng, ta rải tiếp 19 thẻ D vào hết các bạn có thẻ chữ C, hết chữ C ta sẽ rải sang chữ M, nhiều ô chữ C nhất có thể. Sau đó ta rải 11 thẻ chữ T vào ô chữ CN, hết các ô đó ta sẽ rải sang các ô còn lại, khi hết 11 thẻ chữ T ta tiếp tục rải chữ X vào tất cả các ô không chứa chữ T. Khi đó ô nào mà chữa 3 chữ CNX thì đó chính là học sinh đi giày Nâu, đội mũ Cứng và mặc áo Xanh.
+	
+	MNX	MNX	MNX	MNX	MNX	MNX	MNX	MNX	MNX	MNX
+	MNX	MNX	MNX	MNX	MNX	MNX	MNX	MNX	CNX	CNX
+	CNT	CNT	CNT	CNT	CNT	CNT	CNT	CNT	CNT	CNT
+	CDX	CDX	CDX	CDX	CDX	CDX	CDX	CDX	CDX	CNT
+	CDX	CDX	CDX	CDX	CDX	CDX	CDX	CDX	CDX	CDX
+	Nhìn vào bảng ta thấy chỉ có hai ô có 3 chữ CNX nên có ít nhất 2 học sinh đội mũ cứng, đi giày nâu và mặc áo xanh.
+	Nhận xét: Đây là bài Toán logic khá hóc búa vì nó chứa đến 6 yếu tố để tác động lên một học sinh, nếu dùng phương pháp suy luận thông thường chúng ta sẽ vấp phải các lý luận khá phức tạp và dễ bị nhầm lẫn. Phương pháp ``Ô ăn quan" cho ta một lời giải rất đẹp đẽ và khá ngắn gọn.
+	
+	IV. Bài tập đề xuất
+	
+	Bài 1: Trong một Hội nghị có 100 người tham dự, trong đó có 10 người không biết tiếng Nga và tiếng Anh, có 75 người biết tiếng Nga và 83 người biết Tiếng Anh. Hỏi trong hội nghị có bao nhiêu người biết cả 2 thứ tiếng Nga và Anh?
+	Bài 2: Một lớp học có 16 học sinh học giỏi môn Toán; 12 học sinh học giỏi môn Văn; 8 học sinh vừa học giỏi môn Toán và Văn; 19 học sinh không học giỏi cả hai môn Toán và Văn. Hỏi lớp học có bao nhiêu học sinh?
+	
+	Bài 3: Một lớp có 45 học sinh. Mỗi em đều đăng ký chơi ít nhất một trong hai môn: bóng đá và bóng chuyền. Có 35 em đăng ký môn bóng đá, 15 em đăng ký môn bóng chuyền. Hỏi có bao nhiêu em đăng ký chơi cả 2 môn?
+	Bài 4: Lớp 12A có 20 học sinh thích bóng đá, 17 học sinh thích bơi, 36 học sinh thích bóng chuyền,14 học sinh thích bơi và bóng đá, 13 học sinh thích bơi và bóng chuyền, 15 học sinh thích bóng đá và bóng chuyền, 10 học sinh thích cả 3, 12 học sinh không thích môn nào cả . Tính số học sinh của lớp 12A?
+	Bài 5: Lớp 10A có 40 học sinh trong đó có 10 bạn học sinh giỏi Toán, 15 bạn học sinh giỏi Lý , và 22 bạn không giỏi môn học nào trong hai môn Toán, Lý. Hỏi lớp 10A có bao nhiêu bạn học sinh vừa giỏi Toán vừa giỏi Lý?
+	Bài 6: (Thi giữa kỳ 1-Trường PTTH Lý Nhân Tông, Hà Nội) Lớp 10A có 45 học sinh trong đó có 15 học sinh thích chơi đá bóng, 12 học sinh thích chơi bóng rổ, 6 học sinh thích chơi cả 2 môn. Số học sinh không thích chơi cả 2 môn thể thao trên là:
+	Bài 7: Lớp 10A có 7 học sinh giỏi Toán, 5 học sinh giỏi Lý, 6 học sinh giỏi Hóa, 3 học sinh giỏi cả Toán và Lý, 4 học sinh giỏi cả Toán và Hóa, 2 học sinh giỏi cả Lý và Hóa, 1 học sinh giỏi cả 3 môn Toán, Lý, Hóa. Số học sinh giỏi đúng hai môn học của lớp 10A là bao nhiêu.
+	Bài 8: (Câu 3.48, trang 66, Sách BT Đại số 10 Nâng cao)Có ba lớp học sinh 10A, 10B, 10C gồm 128 em cùng tham gia lạo động trồng cây. Mỗi em lớp 10A trồng được 3 cây bạch đàn và 4 cây bàng. Mỗi em lớp 10B trồng được 2 cây bạch đàn và 5 cây bàng. Mỗi em lớp 10C trồng được 6 cây bạch đàn. Cả ba lớp trồng được là 476 cây bạch đàn và 375 cây bàng. Hỏi mỗi lớp có bao nhiêu học sinh?
+	Bài 9: (Câu 8, trang 18, Toán 10 tập 1 Sách Cánh Diều) Một nhóm có 12 học sinh chuẩn bị hội diễn văn nghệ. Trong danh sách đăng ký tham gia tiết mục múa và tiết mục hát của nhóm đó, có 5 học sinh tham gia tiết mục múa và 3 học sinh tham gia cả hai tiết mục. Hỏi có bao nhiêu học sinh trong nhóm tham gia tiết mục hát? Biết có 4 học sinh của nhóm không tham gia tiết mục nào.
+	Bài toán 10: (Câu 5, trang 25 sách Toán 10 - Chân trời sáng tạo) Trong số 35 học sinh của lớp 10H, có 20 học sinh thích môn Toán, 16 học sinh thích môn Tiếng Anh và 12 học sinh thích cả hai môn này. Hỏi lớp 10H :
+	a)	Có bao nhiêu học sinh thích ít nhất một trong hai môn Toán và Tiếng Anh ?
+	b)	Có bao nhiêu học sinh không thích cả hai môn này.
+	
+	Tài liệu tham khảo
+	
+	[1]	L. V. An, N. T. Sơn, N. T. Thiêm, N. T. H. Anh, N. Q. Chung (2023), Nhìn bài toán cổ theo quan điểm Tổ hợp, Kỷ yếu HTKH cấp Trường: "Nâng cao chất lượng đào tạo ngành Sư phạm trong bối cảnh hiện nay", Trường Đại học Hà Tĩnh, (Hà Tĩnh, ngày 24/3/2023), 179 - 186.
+	
+	[2]	Naum Yakolevich Vilenkin - Dịch giả: Nguyễn Tiến Dũng, Trần Thanh Nam, Nguyễn Chí Thức, Hồ Thị Thảo Trang, Toán học qua các câu chuyện về Tập hợp, Tủ sách SPUTNIK, NXB Thế giới, năm 2017.
+	
+	[3]	Trịnh Hồng Long, 670 bài toán đố, NXB Sống Mới, năm 1970.
+	
+	[4]	Người dịch: Trần Lưu Cường, Trần Lưu Thịnh, Những bài toán cổ, NXB giáo dục, năm 1995.
+	
+	[4]	Trần Nam Dũng (Tổng chủ biên), Trần Đức Huyên (Chủ biên), Nguyễn Thành Anh – Vũ Như Thư Hương – Ngô Hoàng Long – Phạm Hoàng Quân – Phạm Thị Thu Thủy, Sách chân trời sáng tạo-Toán 10-Tập 1, NXB giáo dục Việt Nam, năm 2022.
+	
+	[5]	Đỗ Đức Thái (Tổng chủ biên), Phạm Xuân Chung, Nguyễn Sơn Hà, Nguyễn Thị Phương Loan, Phạm Sỹ Nam, Phạm Minh Phương, Phạm Hoàng Quân, Sách Cánh diều - Toán 10 – Tập 1, NXB Giáo dục, năm 2021
+	
 \end{multicols}
