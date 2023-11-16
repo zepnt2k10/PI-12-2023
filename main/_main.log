@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.6.2)  15 NOV 2023 16:29
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2022.6.2)  16 NOV 2023 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3176,7 +3176,6 @@ File: ftoancuabi2.pdf Graphic file (type pdf)
 <use ftoancuabi2.pdf>
  [3]
 Missing character: There is no × in font zptmcm7t!
-)
 File: toancuabi1.pdf Graphic file (type pdf)
 <use toancuabi1.pdf>
 File: ftoancuabi1.pdf Graphic file (type pdf)
@@ -3189,7 +3188,133 @@ File: toancuabi1.pdf Graphic file (type pdf)
 <use toancuabi1.pdf>
 File: ftoancuabi1.pdf Graphic file (type pdf)
 <use ftoancuabi1.pdf>
- [4] (_main.aux)
+[4]
+Overfull \hbox (1.0959pt too wide) in paragraph at lines 674--686
+ [][] 
+ []
+
+
+Overfull \hbox (1.0959pt too wide) in paragraph at lines 674--686
+ [] 
+ []
+
+
+Overfull \hbox (1.6797pt too wide) in paragraph at lines 662--686
+[][] 
+ []
+
+
+Overfull \hbox (1.6797pt too wide) in paragraph at lines 719--777
+[][] 
+ []
+
+File: ../toancuabi/toantienganh//23-24-s3-i-p3.pdf Graphic file (type pdf)
+<use ../toancuabi/toantienganh//23-24-s3-i-p3.pdf>
+
+Overfull \hbox (1.6797pt too wide) in paragraph at lines 794--801
+[][] 
+ []
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 5 might be wrong on input line 801.
+
+
+
+Overfull \vbox (11.62634pt too high) has occurred while \output is active []
+
+File: ../toancuabi/toantienganh//../mathc.pdf Graphic file (type pdf)
+<use ../toancuabi/toantienganh//../mathc.pdf>
+File: ../toancuabi/toantienganh//../tieudeb.pdf Graphic file (type pdf)
+<use ../toancuabi/toantienganh//../tieudeb.pdf>
+File: ftoancuabi2.pdf Graphic file (type pdf)
+<use ftoancuabi2.pdf>
+File: ftoancuabi2.pdf Graphic file (type pdf)
+<use ftoancuabi2.pdf>
+File: ftoancuabi2.pdf Graphic file (type pdf)
+<use ftoancuabi2.pdf>
+
+[5]
+File: ../toancuabi/toantienganh//23-24-s3-i-p3-s.pdf Graphic file (type pdf)
+<use ../toancuabi/toantienganh//23-24-s3-i-p3-s.pdf>
+File: ../toancuabi/toantienganh//23-24-s3-i-p4.pdf Graphic file (type pdf)
+<use ../toancuabi/toantienganh//23-24-s3-i-p4.pdf>
+
+Overfull \hbox (1.6797pt too wide) in paragraph at lines 823--830
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--834
+[]\TU/EBGaramond(0)/m/it/12 Solution. \TU/EBGaramond(0)/m/n/12 It is easy to se
+e that the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--834
+\TU/EBGaramond(0)/m/n/12 quadrilaterals $[]\OML/ztmcm/m/it/12 GCDE$[] \TU/EBGar
+amond(0)/m/n/12 and $[]\OML/ztmcm/m/it/12 HDEF$[] \TU/EBGaramond(0)/m/n/12 are
+ []
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 831--834
+\TU/EBGaramond(0)/m/n/12 congruent, thus have the same area, or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 840--840
+\TU/EBGaramond(0)/m/n/12 the sides in the convex quadrilateral
+ []
+
+File: ../toancuabi/toantienganh//23-24-s3-i-p5.pdf Graphic file (type pdf)
+<use ../toancuabi/toantienganh//23-24-s3-i-p5.pdf>
+
+Overfull \hbox (1.6797pt too wide) in paragraph at lines 840--847
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
+[]\TU/EBGaramond(0)/m/it/12 Solution. $[]\OML/ztmcm/m/it/12 EH$[] \TU/EBGaramon
+d(0)/m/n/12 is the mid-segment (the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
+\TU/EBGaramond(0)/m/n/12 segment connecting two midpoints) in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
+[]\OMS/ztmcm/m/n/12 4\OML/ztmcm/m/it/12 ABD;$[] \TU/EBGaramond(0)/m/n/12 theref
+ore $[]\OT1/ztmcm/m/n/12 [\OML/ztmcm/m/it/12 AEH\OT1/ztmcm/m/n/12 ] = [][\OML/z
+tmcm/m/it/12 ABD\OT1/ztmcm/m/n/12 ]\OML/ztmcm/m/it/12 :$[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
+\TU/EBGaramond(0)/m/n/12 Similarly $[]\OT1/ztmcm/m/n/12 [\OML/ztmcm/m/it/12 BEF
+\OT1/ztmcm/m/n/12 ] = [][\OML/ztmcm/m/it/12 ABC\OT1/ztmcm/m/n/12 ]\OML/ztmcm/m/
+it/12 ;$[] $[]\OT1/ztmcm/m/n/12 [\OML/ztmcm/m/it/12 CFG\OT1/ztmcm/m/n/12 ] =
+ []
+
+
+Overfull \vbox (5.08669pt too high) has occurred while \output is active []
+
+File: toancuabi1.pdf Graphic file (type pdf)
+<use toancuabi1.pdf>
+File: ftoancuabi1.pdf Graphic file (type pdf)
+<use ftoancuabi1.pdf>
+File: toancuabi1.pdf Graphic file (type pdf)
+<use toancuabi1.pdf>
+File: ftoancuabi1.pdf Graphic file (type pdf)
+<use ftoancuabi1.pdf>
+File: toancuabi1.pdf Graphic file (type pdf)
+<use toancuabi1.pdf>
+File: ftoancuabi1.pdf Graphic file (type pdf)
+<use ftoancuabi1.pdf>
+
+[6]) (_main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -3200,12 +3325,12 @@ Package logreq Info: Writing requests to '_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68733 strings out of 410939
- 1561297 string characters out of 2823530
+ 68823 strings out of 410939
+ 1564759 string characters out of 2823530
  2668447 words of memory out of 3000000
- 88253 multiletter control sequences out of 15000+600000
+ 88332 multiletter control sequences out of 15000+600000
  511765 words of font info for 150 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  104i,12n,120p,1239b,999s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on _main.pdf (4 pages).
+Output written on _main.pdf (6 pages).

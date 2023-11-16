@@ -635,178 +635,223 @@
 %	\textit{Lời giải.} Số các cặp Điệp viên tí hon là $\dfrac{20\times 19}{2} = 190$ (cặp). Có tất cả $10\times 20=200$ báo cáo được gửi về Sở chỉ huy vào cuối đợt chơi, suy ra phải có ít nhất $10$ cặp Điệp viên mà hai người trong mỗi cặp báo cáo lẫn nhau về Sở chỉ huy.
 %\end{multicols}
 %
-%\newpage
-%\begingroup
-%\thispagestyle{toancuabinone}
-%\blfootnote{$^1$\color{toancuabi}Ottawa, Canada.}
-%\AddToShipoutPicture*{\put(60,733){\includegraphics[width=17.2cm]{../mathc.pdf}}}
-%%\AddToShipoutPicture*{\put(-2,733){\includegraphics[width=17.2cm]{../mathl.pdf}}} 
-%\AddToShipoutPicture*{\put(110,675){\includegraphics[scale=1]{../tieudeb.pdf}}} 
-%\centering
-%\endgroup
-%\vspace*{35pt}
-%
-%\begin{multicols}{2}
-%	In this article, we discuss the Extremal Principle and its applications.
-%	One of the simplest forms of the principle is as follow:
-%	``in a finite set of numbers, there is a number with minimal value,
-%	i.e. it is smaller than or equal to any other number in the set.
-%	Similarly there is a number with maximal value,
-%	i.e. it is larger than or equal to any other number in the set."
-%	\vskip 0.1cm
-%	\textit{Proof by contradiction} is an extremely useful tool when combining with the Extremal Principle,
-%	as you will see in below examples.
-%	\vskip 0.2cm
-%	\PIbox{{\color{toancuabi}\textbf{\color{toancuabi}\color{toancuabi}Example} (Dancing at a party)}
-%			At a party no boy danced with all the girls,
-%			but each girl dances with at least one boy.
-%			Prove that there are two pairs of girl--boy $(g_1, b_1)$ and $(g_2, b_2)$
-%			who danced with each other but $g_1$ did not dance with $b_2$
-%			and $g_2$ did not dance with $b_1.$}
-%	\vskip 0.2cm
-%	\textit{Solution.}
-%		Let $b_1$ be \textit{the boy who danced with the maximum number of girls.}
-%		Then there is a girl $g_2$ who he did not danced with.
-%		For $g_2$ there is a boy $b_2$ that $(g_2,b_2)$ danced together.
-%		Among the girls who danced with $b_1$ there is at least one $g_1$ who did not danced with $b_2,$
-%		otherwise $b_2$ danced with $g_2$ and all the girls that $b_1$ danced with,
-%		meaning $b_2$ danced with more girls than $b_1,$ contradicting with the choice of $b_1.$
-%	\vskip 0.2cm
-%	\PIbox{{\color{toancuabi}\textbf{\color{toancuabi}\color{toancuabi}Example} (Infinity by contradiction)}
-%			$\Omega$ is a set of points on the plane.
-%			Every point in $\Omega$ is a midpoint of two points in $\Omega$.
-%			Show that $\Omega$ is infinite set.}
-%	\vskip 0.2cm
-%	\textit{Solution.}
-%	Suppose that $\Omega$ is a finite set.
-%	According to the Extremal Principle,
-%	\textit{there exists two points $A, B \in \Omega,$ such that the distance $AB$ is maximal.}
-%	\vskip 0.1cm
-%	Now, since $B \in \Omega,$ there exist two points $C,D \in \Omega$ so that $B$ is the midpoint of $CD.$
+\newpage
+\graphicspath{{../toancuabi/toantienganh/}}
+\begingroup
+\thispagestyle{toancuabinone}
+\blfootnote{$^1$\color{toancuabi}Ottawa, Canada.}
+\AddToShipoutPicture*{\put(60,733){\includegraphics[width=17.2cm]{../mathc.pdf}}}
+%\AddToShipoutPicture*{\put(-2,733){\includegraphics[width=17.2cm]{../mathl.pdf}}} 
+\AddToShipoutPicture*{\put(106,675){\includegraphics[scale=1]{../tieudeb.pdf}}} 
+\centering
+\endgroup
+\vspace*{35pt}
+
+\begin{multicols}{2}
+	\setlength{\abovedisplayskip}{6pt}
+	\setlength{\belowdisplayskip}{6pt}
+	In this article, we will investigate a number of ways to \textit{prove area equality without writing lengthy proof.}
+	While it sounds simple, easy, and exciting, it is important that you need to improve your creating thinking in order to 
+	first understand the examples, and then use them as tools, guidelines, or ideas to solve the problems.
+	\vskip 0.2cm
+	\PIbox{
+	\textbf{\color{toancuabi}Example $\pmb1$.}
+	$E$ is an arbitrary point inside the parallelogram $ABCD,$ prove that
+	\begin{align*}
+		[AEB] + [CED] = \half [ABCD].
+	\end{align*}}
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\begin{tikzpicture}[toancuabi]
+			\draw (0,0) -- (4,0) -- (6,3) -- (2,3) -- (0,0) -- (3.2,1) -- (4,0) (2,3) -- (3.2,1) -- (6,3);
+			\draw[fill=white] (3.2,1) circle (2pt) node [above=5pt] {$E$};
+			\draw[fill=white] (2,3) circle (2pt) node [anchor = south east] {$A$};
+			\draw[fill=white] (0,0) circle (2pt) node [anchor = north east] {$B$};
+			\draw[fill=white] (4,0) circle (2pt) node [anchor = north west] {$C$};
+			\draw[fill=white] (6,3) circle (2pt) node [anchor = south west] {$D$};
+		\end{tikzpicture}
+		\begin{tikzpicture}[toancuabi]
+			\draw (0,0) -- (4,0) -- (6,3) -- (2,3) -- (0,0) -- (3.2,1) -- (4,0) (2,3) -- (3.2,1) -- (6,3) (2.53,0) -- (4.53,3) (0.66,1) --(4.66,1);
+			\draw[fill=white] (3.2,1) circle (2pt) node [above=5pt] {$E$};
+			\draw[fill=white] (2,3) circle (2pt) node [anchor = south east] {$A$};
+			\draw[fill=white] (0,0) circle (2pt) node [anchor = north east] {$B$};
+			\draw[fill=white] (4,0) circle (2pt) node [anchor = north west] {$C$};
+			\draw[fill=white] (6,3) circle (2pt) node [anchor = south west] {$D$};
+			\draw[fill=white] (4.53,3) circle (2pt) node [anchor = south west] {$J$};
+			\draw[fill=white] (0.66,1) circle (2pt) node [left] {$K$};
+		\end{tikzpicture}
+		\vspace*{-10pt}
+	\end{figure}
 %	\begin{figure}[H]
-%			\vspace*{-5pt}
-%			\centering
-%			\captionsetup{labelformat= empty, justification=centering}
-%			\begin{tikzpicture}[toancuabi,scale=0.75]
-%					\draw  (0.,0.)-- (3.,3.);
-%					\draw  (3.,3.)-- (5.,-3.);
-%					\draw  (5.,-3.)-- (0.,0.);
-%					\draw  (0.,0.)-- (4.,0.);
-%						\draw [fill=white] (0.,0.) circle (1.5pt);
-%						\draw (-0.32,0.11) node {$A$};
-%						\draw [fill=white] (3.,3.) circle (1.5pt);
-%						\draw (3.14,3.37) node {$C$};
-%						\draw [fill=white] (5.,-3.) circle (1.5pt);
-%						\draw (5.32,-3.01) node {$D$};
-%						\draw [fill=white] (4.,0.) circle (1.5pt);
-%						\draw (4.36,0.15) node {$B$};
-%				\end{tikzpicture}
-%			\vspace*{-10pt}
-%		\end{figure}    
-%	Since one of the angles $\angle ABC,$ $\angle ABD,$ says $\angle ABD$ is at least $90^{\circ},$
-%	thus in $\triangle ABD,$ $AD > AB.$
-%	This contradicts the assumption that $A, B$ are the two points in $\Omega,$ such that the distance $AB$ is maximal.
-%	\vskip 0.1cm	
-%	Thus, there are no such two points $A, B,$ so $\Omega$ is infinite set.
-%	\vskip 0.2cm
-%	\PIbox{{\color{toancuabi}\textbf{\color{toancuabi}\color{toancuabi}Example} (How many olives did the knights eat?)}
-%		At the dinner of King Anthony, several knights sits around a round table eating green olives.
-%		Minh, the Magician, made sure that each knight ate either twice as many olives
-%		or $10$ olives less than his right neighbour. 
-%		Is that possible that the knights could have eaten exactly $1001$ olives?}
-%	\vskip 0.2cm
-%	\textit{Solution.}
-%	Let assume that the knights have eaten exactly $1001$ olives.
-%	Let choose the knight who \textit{ate the smallest number of olives}.
-%	(If there are some of them, choose one.)
-%	His neighbour on the left, knight $k$, ate either $10$ less or twice more.
-%	Since the knight we chose ate the smallest number of olives, then knight $k$ ate twice as many.
-%	Therefore, knight $k$ ate an even number of olives. 
-%	\vskip 0.1cm	
-%	The neighbour on the left of knight $k$ ate either twice as many olives or $10$ olives less,
-%	hence he ate an even number of olives as well. Making the full circle, we'll end us with the first knight,
-%	who must have eaten an even number of olives as well.
-%	\vskip 0.1cm	
-%	Therefore, the total number of olives must be an even number.
-%	The number of olives eaten cannot be $1001.$
-%	\vskip 0.2cm
-%	\PIbox{{\color{toancuabi}\textbf{\color{toancuabi}\color{toancuabi}Example} (Chop the flies)}
-%		$25$ flies are resting on the outdoor table in the garden, waiting for lunch to be served.
-%		It is known that for any three of them, two are at a distance less than $20$ cm;
-%		and there are at least a pair of flies that are further than $20$ cm from each other.
-%		\vskip 0.1cm
-%		Minh's mother gave him a fly swatter, shown below, with a hoop of radius $20$ cm,
-%		With a single strike he can swat the flies where the hoop landed.
-%		In \textit{at least} how many strikes can he swat all of them?
-%		\textit{Note that Minh is so fast that the flies do not have time for reaction during and between his lightning strikes.}}
-%	\vskip 0.2cm
+%		\vspace*{-10pt}
+%		\centering
+%		\captionsetup{labelformat= empty, justification=centering}
+%		\includegraphics[width= 1\linewidth]{23-24-s3-i-p1.pdf}
+%		\vspace*{-20pt}
+%	\end{figure}
+	\textit{Solution.}
+	Draw lines through $E,$ parallel with sides of $ABCD,$ dividing the parallelogram into four smaller parallelograms.
+	Any of the smaller parallelogram, say $AKEJ$, consists of a brown triangle from the shaded triangle and a green triangles with the same area.
+	Thus, the area of the shaded triangles is the sum of the area of all smaller brown triangles, which is half of the sum of the area of all smaller parallelograms,
+	of half of the $ABCD$ parallelogram.
+	\vskip 0.1cm
+	\textbf{\color{toancuabi}Remark.} Here's how we use the techniques:
+	\vskip 0.1cm
+	$1.$ First, divide the given figure into smaller figures.
+	\vskip 0.1cm
+	$3$. Deal with each of them, iif they have the same shape, then work in the same way.
+	\vskip 0.1cm
+	$3.$ Use all partial results to arrive at the overall result.
+	\vskip 0.2cm
 %	\begin{figure}[H]
 %		\vspace*{-5pt}
 %		\centering
 %		\captionsetup{labelformat= empty, justification=centering}
-%		\includegraphics[width= 0.85\linewidth]{vr}
-%		%		\caption{\small\textit{\color{}}}
+%		\includegraphics[width= 0.9\linewidth]{23-24-s3-i-p1-s.pdf}
+%		\vspace*{-15pt}
+%	\end{figure}
+	\PIbox{\textbf{\color{toancuabi}Example $\pmb2$.}
+	$E$ and $F$ are midpoints of $BC$ and $DA$ in the convex quadrilateral $ABCD,$ prove that
+	\begin{align*}
+		[AECF] = \half [ABCD].
+	\end{align*}}
+\begin{figure}[H]
+	\vspace*{-5pt}
+	\centering
+	\captionsetup{labelformat= empty, justification=centering}
+	\begin{tikzpicture}
+		\draw  (5.,0.)-- (3.75,3.);
+		\draw  (5.,-4.)-- (3.75,-1.);
+		\draw  (0.,0.)-- (1.25,2.165063509461097);
+		\draw  (1.25,2.165063509461097)-- (2.5,2.5825317547305486);
+		\draw  (1.7922093978532345,2.468742834111641) -- (1.8658796296660776,2.248156500157986);
+		\draw  (1.884120370333924,2.499438764033659) -- (1.957790602146767,2.278852430080004);
+		\draw  (2.5,2.5825317547305486)-- (3.75,3.);
+		\draw  (3.0422093978532336,2.8862110793810927) -- (3.1158796296660767,2.6656247454274378);
+		\draw  (3.134120370333923,2.9169070093031104) -- (3.207790602146766,2.6963206753494555);
+		\draw  (5.,-4.)-- (2.5,-4.);
+		\draw  (3.75,-4.11628159117254) -- (3.75,-3.8837184088274594);
+		\draw  (2.5,-4.)-- (0.,-4.);
+		\draw  (1.25,-4.11628159117254) -- (1.25,-3.8837184088274594);
+		\draw  (0.,-4.)-- (1.25,-1.8349364905389032);
+		\draw  (1.25,-1.8349364905389032)-- (5.,-4.);
+		\draw  (5.,0.)-- (2.5,0.);
+		\draw  (3.75,-0.11628159117254047) -- (3.75,0.11628159117254047);
+		\draw  (2.5,0.)-- (0.,0.);
+		\draw  (1.25,-0.11628159117254047) -- (1.25,0.11628159117254047);
+		\draw  (1.25,-1.8349364905389032)-- (2.5,-1.4174682452694516);
+		\draw  (1.7922093978532345,-1.53125716588836) -- (1.8658796296660776,-1.7518434998420143);
+		\draw  (1.884120370333924,-1.5005612359663414) -- (1.957790602146767,-1.7211475699199956);
+		\draw  (2.5,-1.4174682452694516)-- (3.75,-1.);
+		\draw  (3.0422093978532336,-1.1137889206189073) -- (3.1158796296660767,-1.3343752545725616);
+		\draw  (3.134120370333923,-1.0830929906968887) -- (3.207790602146766,-1.303679324650543);
+			\draw [fill=white] (0.,0.) circle (2.0pt);
+			\draw (-0.3177952991732108,-0.09743478291470092) node {$B$};
+			\draw [fill=white] (5.,0.) circle (2.0pt);
+			\draw (5.224960546717885,-0.21371637408724142) node {$C$};
+			\draw [fill=white] (2.5,0.) circle (2.0pt);
+			\draw (2.6280050105311474,0.3289310513846141) node {$E$};
+			\draw [fill=white] (1.25,2.165063509461097) circle (2.0pt);
+			\draw (1.0000627341155812,2.5964220792491535) node {$A$};
+			\draw [fill=white] (3.75,3.) circle (2.0pt);
+			\draw (3.8877222482336693,3.3522524218706664) node {$D$};
+			\draw [fill=white] (2.5,2.5825317547305486) circle (2.0pt);
+			\draw (2.6280050105311474,2.906506322375928) node {$F$};
+			\draw [fill=white] (0.,-4.) circle (2.0pt);
+			\draw (-0.33717556436863416,-4.206051004344464) node {$B1$};
+			\draw [fill=white] (5.,-4.) circle (2.0pt);
+			\draw (5.283101342304154,-4.244811534735311) node {$C1$};
+			\draw [fill=white] (3.75,-1.) circle (2.0pt);
+			\draw (3.94586304381994,-0.6400822083865565) node {$D1$};
+			\draw [fill=white] (2.5,-4.) circle (2.0pt);
+			\draw (2.492343154163184,-4.283572065126157) node {$E1$};
+			\draw [fill=white] (1.25,-1.8349364905389032) circle (2.0pt);
+			\draw (1.0000627341155812,-1.4540533465943397) node {$A1$};
+			\draw [fill=white] (2.5,-1.4174682452694516) circle (2.0pt);
+			\draw (2.5117234193586073,-0.9695467167087544) node {$F1$};
+			\draw [fill=white] (2.5,-1.4174682452694516) circle (2.0pt);
+	\end{tikzpicture}
+	\vspace*{-10pt}
+\end{figure}
+
+	\textit{Solution.}
+	Connect $AC.$ Since $E$ is midpoint of $BC,$ thus the triangles $ABE$ and $AEC$ have the same area.
+	Similarly triangles $CDF$ and $CFA$ have the same area. Thus the area of $AECF$ is half of $ABCD.$
+	\vskip 0.2cm
+%	\begin{figure}[H]
+%		\vspace*{-5pt}
+%		\centering
+%		\captionsetup{labelformat= empty, justification=centering}
+%		\includegraphics[width= 1\linewidth]{23-24-s3-i-p2-s.pdf}
 %		\vspace*{-10pt}
 %	\end{figure}
-%	\textit{Solution.}
-%	If no $2$ flies are further than $20$ cm from each other,
-%	Minh can strike them all in $1$ strike by aiming the center of the swatter at any fly. 
-%	But this is not the case, so let’s assume there are $2$ flies, $A$ and $B$, that are more than $20$ cm apart.
-%	Then, every other fly is either in a $20$ cm radius of $A$ or in a $20$ cm radius of $B.$
-%	Out of the $23$ remaining flies either at least $12$ will be in the $20$ cm radius of $A$
-%	or $12$ will be in the $20$ cm radius of $B$.
-%	Swatting that the $A$ or $B$ fly with the center of the swatter kills at least $13$.
-%	\vskip 0.1cm
-%	Thus, by $2$ strikes, he can swat them all.
-%	\begin{center}
-%		\textbf{\color{toancuabi}\color{toancuabi}Vocabulary}
-%	\end{center}
-%	{\color{toancuabi}Angle}: (dt) góc.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Application}: (dt)  áp dụng, ứng dụng.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Contradiction}: (dt) mâu thuẫn, {\color{toancuabi}proof by contradiction}: chứng minh bằng phản chứng.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Even}: (tt) chẵn, {\color{toancuabi}even number}: số chẵn.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Knight}: (dt) hiệp sỹ.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Neighbour}: (dt) người bên cạnh. 
-%	\vskip 0.1cm
-%	{\color{toancuabi}Midpoint}: (dt) trung điểm.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Discuss}: (đt) thảo luận, trao đổi.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Distance}: (dt) khoảng cách.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Fly}: (dt) côn trùng.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Finite}: (tt) hữu hạn.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Hoop}: (dt) vành, đầu vỉ ruồi.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Infinite}: (tt) vô hạn, vô cùng, infinity (dt). 
-%	\vskip 0.1cm
-%	{\color{toancuabi}Maximal}: (tt) lớn nhất.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Minimal}: (tt) nhỏ nhất.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Olive}: (dt) quả ô-liu. 
-%	\vskip 0.1cm
-%	{\color{toancuabi}Plane}: (dt) mặt phẳng.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Point}: (dt) điểm.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Principle}: (dt) nguyên lý,  {\color{toancuabi}extremal principle}: nguyên lý cực hạn.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Swatter}: vỉ, {\color{toancuabi}fly swatter}: vỉ ruồi.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Set}: (dt) tập hợp.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Strike}: (đt) đập, đánh.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Table}: (dt) cái bàn, {\color{toancuabi}round table}: bàn tròn, {\color{toancuabi}outdoor table}: bàn ngoài trời.
-%	\vskip 0.1cm
-%	{\color{toancuabi}Value}: (dt) giá trị.
-%	
-%\end{multicols}
+	\PIbox{\textbf{\color{toancuabi}Example $\pmb3$.}
+		$I$ is an arbitrary point on the diagonal $BD$ in parallelogram $ABCD.$
+		Lines through $I$ parallel with the sides of $ABCD$ intersect $AB,$ $BC,$ $CD,$ and $DA$ at $E, F, G,$ and $H,$ respectively.
+		\begin{align*}
+			[AEIH] = [FCGI].
+		\end{align*}}
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{23-24-s3-i-p3.pdf}
+		\vspace*{-10pt}
+	\end{figure}
+	\textit{Solution.}
+	First, since $BD$ is the diagonal in parallelogram $ABCD,$ $[ABD] = [BCD].$
+	Now, $BEIF$ is also a parallelogram, thus $[BEI] = [BFI],$ similarly $[HID] = [IGD].$
+	Therefore 
+	\begin{align*}
+		[AEIH] &= [ABD] - [BEI] - [HID] \\
+		&= [BCD] - [BFI] - [IGD] \\
+		&= [FCGI].
+	\end{align*}
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{23-24-s3-i-p3-s.pdf}
+		\vspace*{-10pt}
+	\end{figure}
+	\PIbox{\textbf{\color{toancuabi}Example $\pmb4$.} 
+	$G, H$ are midpoints of $BC, CD$ in th regular hexagon $ABCDEF.$
+	$EG$ and $FH$ intersect at $I.$ Prove that
+	\begin{align*}
+		[GCHI] = [EFI].
+	\end{align*}}
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{23-24-s3-i-p4.pdf}
+		\vspace*{-10pt}
+	\end{figure}
+	\textit{Solution.}
+		It is easy to see that the quadrilaterals $GCDE$ and $HDEF$ are congruent, thus have the same area, or $[GCDE] = [HDEF].$
+		Taking $HDEI$ away, we have $[GCHI] = [EFI].$ 
+	\vskip 0.2cm
+	\PIbox{\textbf{\color{toancuabi}Example $\pmb5$.}
+		$E, F, G,$ and $H$ are midpoints the sides in the convex quadrilateral $ABCD.$
+		Prove that
+		\begin{align*}
+			[EFGH] = \half [ABCD].
+		\end{align*}}
+	\begin{figure}[H]
+		\vspace*{-5pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\includegraphics[width= 1\linewidth]{23-24-s3-i-p5.pdf}
+		\vspace*{-10pt}
+	\end{figure}
+	\textit{Solution.}
+		$EH$ is the mid-segment (the segment connecting two midpoints) in $\triangle ABD,$ therefore $[AEH] = \frac{1}{4}[ABD].$
+		Similarly $[BEF] = \frac{1}{4}[ABC],$ $[CFG] = \frac{1}{4}[BCD],$ and $[GDH] = \frac{1}{4}[CDA],$ therefore:
+		\begin{align*}
+			&[AEH] + [BEF] + [CFG] + [GDH] \\
+			&= \half [ABCD]\\
+			 \Rightarrow  &[EFGH] = \half [ABCD].
+		\end{align*} 
+\end{multicols}
